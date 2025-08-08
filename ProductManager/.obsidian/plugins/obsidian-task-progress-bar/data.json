@@ -1,0 +1,1855 @@
+{
+  "progressBarDisplayMode": "both",
+  "supportHoverToShowProgressInfo": true,
+  "addProgressBarToNonTaskBullet": false,
+  "addTaskProgressBarToHeading": true,
+  "enableProgressbarInReadingMode": true,
+  "countSubLevel": true,
+  "displayMode": "custom",
+  "customFormat": "[{{COMPLETED}}/{{TOTAL}}]",
+  "showPercentage": true,
+  "customizeProgressRanges": true,
+  "progressRanges": [
+    {
+      "min": 0,
+      "max": 20,
+      "text": "Just started {{PROGRESS}}%"
+    },
+    {
+      "min": 20,
+      "max": 40,
+      "text": "Making progress {{PROGRESS}}%"
+    },
+    {
+      "min": 40,
+      "max": 60,
+      "text": "Half way {{PROGRESS}}%"
+    },
+    {
+      "min": 60,
+      "max": 80,
+      "text": "Good progress {{PROGRESS}}%"
+    },
+    {
+      "min": 80,
+      "max": 100,
+      "text": "Almost there {{PROGRESS}}%"
+    }
+  ],
+  "allowCustomProgressGoal": true,
+  "hideProgressBarBasedOnConditions": true,
+  "hideProgressBarTags": "no-progress,hide-progress",
+  "hideProgressBarFolders": "",
+  "hideProgressBarMetadata": "hide-progress-bar",
+  "showProgressBarBasedOnHeading": "",
+  "autoCompleteParent": true,
+  "markParentInProgressWhenPartiallyComplete": true,
+  "taskStatuses": {
+    "completed": "x|X",
+    "inProgress": "<|/|>|i|f|*",
+    "abandoned": "-",
+    "planned": "+",
+    "notStarted": " "
+  },
+  "countOtherStatusesAs": "inProgress",
+  "excludeTaskMarks": "",
+  "useOnlyCountMarks": false,
+  "onlyCountTaskMarks": "x|X|>|/",
+  "enableTaskStatusSwitcher": true,
+  "enableCustomTaskMarks": false,
+  "enableTextMarkInSourceMode": true,
+  "enableCycleCompleteStatus": true,
+  "taskStatusCycle": [
+    "Not Started",
+    "SCOUT",
+    "PREP",
+    "SCAN",
+    "DIVE",
+    "NOTE",
+    "APPLY",
+    "LINK",
+    "COMPLETE",
+    "ABANDONED"
+  ],
+  "taskStatusMarks": {
+    "SCOUT": "+",
+    "STATUS_2": "+",
+    "PREP": "<",
+    "STATUS_3": "<",
+    "SCAN": "/",
+    "STATUS_4": "/",
+    "DIVE": ">",
+    "STATUS_5": ">",
+    "STATUS_6": "I",
+    "NOTE": "i",
+    "APPLY": "f",
+    "STATUS_7": "f",
+    "LINK": "*",
+    "STATUS_8": "*",
+    "COMPLETE": "x",
+    "STATUS_9": "x",
+    "ABANDONED": "-",
+    "STATUS_10": "-"
+  },
+  "excludeMarksFromCycle": [
+    "Confused"
+  ],
+  "enableTaskGeniusIcons": false,
+  "enablePriorityPicker": true,
+  "enablePriorityKeyboardShortcuts": true,
+  "enableDatePicker": true,
+  "recurrenceDateBase": "due",
+  "taskFilter": {
+    "enableTaskFilter": true,
+    "presetTaskFilters": []
+  },
+  "taskGutter": {
+    "enableTaskGutter": false
+  },
+  "completedTaskMover": {
+    "enableCompletedTaskMover": true,
+    "taskMarkerType": "date",
+    "versionMarker": "version 1.0",
+    "dateMarker": "归档于 {{date}}",
+    "customMarker": "已移动 {{DATE:YYYY-MM-DD HH:mm}}",
+    "treatAbandonedAsCompleted": false,
+    "completeAllMovedTasks": true,
+    "withCurrentFileLink": true,
+    "enableAutoMove": true,
+    "defaultTargetFile": "Archive.md",
+    "defaultInsertionMode": "end",
+    "defaultHeadingName": "Completed Tasks",
+    "enableIncompletedTaskMover": true,
+    "incompletedTaskMarkerType": "date",
+    "incompletedVersionMarker": "version 1.0",
+    "incompletedDateMarker": "移动于 {{date}}",
+    "incompletedCustomMarker": "已移动 {{DATE:YYYY-MM-DD HH:mm}}",
+    "withCurrentFileLinkForIncompleted": true,
+    "enableIncompletedAutoMove": false,
+    "incompletedDefaultTargetFile": "Backlog.md",
+    "incompletedDefaultInsertionMode": "end",
+    "incompletedDefaultHeadingName": "Incomplete Tasks"
+  },
+  "quickCapture": {
+    "enableQuickCapture": true,
+    "targetFile": "QuickCapture.md",
+    "placeholder": "记录你的想法...",
+    "appendToFile": "append",
+    "targetType": "fixed",
+    "targetHeading": "",
+    "dailyNoteSettings": {
+      "format": "YYYY-MM-DD",
+      "folder": "",
+      "template": ""
+    },
+    "enableMinimalMode": true,
+    "minimalModeSettings": {
+      "suggestTrigger": "/"
+    }
+  },
+  "workflow": {
+    "enableWorkflow": true,
+    "autoAddTimestamp": true,
+    "timestampFormat": "YYYY-MM-DD HH:mm:ss",
+    "removeTimestampOnTransition": false,
+    "calculateSpentTime": true,
+    "spentTimeFormat": "HH:mm:ss",
+    "calculateFullSpentTime": false,
+    "autoRemoveLastStageMarker": false,
+    "autoAddNextTask": false,
+    "definitions": [
+      {
+        "id": "project_workflow",
+        "name": "项目工作流",
+        "description": "标准项目管理工作流",
+        "stages": [
+          {
+            "id": "planning",
+            "name": "规划中",
+            "type": "linear",
+            "next": "in_progress"
+          },
+          {
+            "id": "in_progress",
+            "name": "进行中",
+            "type": "cycle",
+            "subStages": [
+              {
+                "id": "development",
+                "name": "开发中",
+                "next": "testing"
+              },
+              {
+                "id": "testing",
+                "name": "测试中",
+                "next": "development"
+              }
+            ],
+            "canProceedTo": [
+              "review",
+              "cancelled"
+            ]
+          },
+          {
+            "id": "review",
+            "name": "回顾",
+            "type": "cycle",
+            "canProceedTo": [
+              "in_progress",
+              "completed"
+            ]
+          },
+          {
+            "id": "completed",
+            "name": "已完成",
+            "type": "terminal"
+          },
+          {
+            "id": "cancelled",
+            "name": "已取消",
+            "type": "terminal"
+          }
+        ],
+        "metadata": {
+          "version": "1.0",
+          "created": "2024-03-20",
+          "lastModified": "2024-03-20"
+        }
+      }
+    ]
+  },
+  "useDailyNotePathAsDate": false,
+  "dailyNoteFormat": "yyyy-MM-dd",
+  "useAsDateType": "due",
+  "dailyNotePath": "",
+  "preferMetadataFormat": "dataview",
+  "projectTagPrefix": {
+    "tasks": "project",
+    "dataview": "project"
+  },
+  "contextTagPrefix": {
+    "tasks": "@",
+    "dataview": "context"
+  },
+  "areaTagPrefix": {
+    "tasks": "area",
+    "dataview": "area"
+  },
+  "fileMetadataInheritance": {
+    "enabled": true,
+    "inheritFromFrontmatter": true,
+    "inheritFromFrontmatterForSubtasks": true
+  },
+  "projectConfig": {
+    "enableEnhancedProject": true,
+    "pathMappings": [],
+    "metadataConfig": {
+      "metadataKey": "project",
+      "enabled": false
+    },
+    "configFile": {
+      "fileName": "project.md",
+      "searchRecursively": false,
+      "enabled": false
+    },
+    "metadataMappings": [],
+    "defaultProjectNaming": {
+      "strategy": "filename",
+      "stripExtension": false,
+      "enabled": false
+    }
+  },
+  "fileParsingConfig": {
+    "enableFileMetadataParsing": true,
+    "metadataFieldsToParseAsTasks": [
+      "dueDate",
+      "todo",
+      "complete",
+      "task"
+    ],
+    "enableTagBasedTaskParsing": true,
+    "tagsToParseAsTasks": [
+      "#todo",
+      "#task",
+      "#action",
+      "#due"
+    ],
+    "taskContentFromMetadata": "title",
+    "defaultTaskStatus": " ",
+    "enableWorkerProcessing": true,
+    "enableMtimeOptimization": true,
+    "mtimeCacheSize": 10000
+  },
+  "useRelativeTimeForDate": false,
+  "ignoreHeading": "",
+  "focusHeading": "",
+  "enableView": true,
+  "enableInlineEditor": true,
+  "defaultViewMode": "tree",
+  "globalFilterRules": {
+    "advancedFilter": {
+      "rootCondition": "all",
+      "filterGroups": [
+        {
+          "id": "id-1752661280008-ojx4s0d0r",
+          "groupCondition": "all",
+          "filters": [
+            {
+              "id": "id-1752661280043-sgdt2874v",
+              "property": "filePath",
+              "condition": "doesNotContain",
+              "value": "Z-Configuration"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "viewConfiguration": [
+    {
+      "id": "inbox",
+      "name": "阅读清单",
+      "icon": "inbox",
+      "type": "default",
+      "visible": true,
+      "hideCompletedAndAbandonedTasks": true,
+      "filterRules": {},
+      "filterBlanks": false,
+      "sortCriteria": []
+    },
+    {
+      "id": "custom_1752654979020",
+      "name": "状态",
+      "icon": "kanban",
+      "type": "custom",
+      "visible": true,
+      "hideCompletedAndAbandonedTasks": false,
+      "filterRules": {},
+      "specificConfig": {
+        "viewType": "kanban",
+        "showCheckbox": true
+      }
+    },
+    {
+      "id": "projects",
+      "name": "主题阅读",
+      "icon": "folders",
+      "type": "default",
+      "visible": true,
+      "hideCompletedAndAbandonedTasks": false,
+      "filterRules": {},
+      "filterBlanks": false,
+      "sortCriteria": []
+    },
+    {
+      "id": "review",
+      "name": "回顾",
+      "icon": "eye",
+      "type": "default",
+      "visible": true,
+      "hideCompletedAndAbandonedTasks": false,
+      "filterRules": {},
+      "filterBlanks": false
+    },
+    {
+      "id": "tags",
+      "name": "标签",
+      "icon": "tag",
+      "type": "default",
+      "visible": true,
+      "hideCompletedAndAbandonedTasks": false,
+      "filterRules": {},
+      "filterBlanks": false
+    },
+    {
+      "id": "forecast",
+      "name": "预测",
+      "icon": "calendar-days",
+      "type": "default",
+      "visible": false,
+      "hideCompletedAndAbandonedTasks": true,
+      "filterRules": {},
+      "filterBlanks": false,
+      "specificConfig": {
+        "viewType": "forecast",
+        "hideWeekends": false
+      }
+    },
+    {
+      "id": "flagged",
+      "name": "已标记",
+      "icon": "flag",
+      "type": "default",
+      "visible": false,
+      "hideCompletedAndAbandonedTasks": true,
+      "filterRules": {},
+      "filterBlanks": false
+    },
+    {
+      "id": "calendar",
+      "name": "事件",
+      "icon": "calendar",
+      "type": "default",
+      "visible": false,
+      "hideCompletedAndAbandonedTasks": false,
+      "filterRules": {},
+      "filterBlanks": false,
+      "specificConfig": {
+        "viewType": "calendar",
+        "hideWeekends": false
+      }
+    },
+    {
+      "id": "kanban",
+      "name": "状态",
+      "icon": "kanban",
+      "type": "default",
+      "visible": false,
+      "hideCompletedAndAbandonedTasks": false,
+      "filterRules": {},
+      "filterBlanks": false,
+      "specificConfig": {
+        "viewType": "kanban",
+        "showCheckbox": true,
+        "hideEmptyColumns": false,
+        "defaultSortField": "priority",
+        "defaultSortOrder": "desc",
+        "groupBy": "status"
+      }
+    },
+    {
+      "id": "gantt",
+      "name": "计划",
+      "icon": "chart-gantt",
+      "type": "default",
+      "visible": false,
+      "hideCompletedAndAbandonedTasks": false,
+      "filterRules": {},
+      "filterBlanks": false,
+      "specificConfig": {
+        "viewType": "gantt",
+        "showTaskLabels": true,
+        "useMarkdownRenderer": true
+      }
+    },
+    {
+      "id": "habit",
+      "name": "习惯",
+      "icon": "calendar-clock",
+      "type": "default",
+      "visible": false,
+      "hideCompletedAndAbandonedTasks": false,
+      "filterRules": {},
+      "filterBlanks": false
+    },
+    {
+      "id": "table",
+      "name": "表格",
+      "icon": "table",
+      "type": "default",
+      "visible": false,
+      "hideCompletedAndAbandonedTasks": false,
+      "filterRules": {},
+      "filterBlanks": false,
+      "specificConfig": {
+        "viewType": "table",
+        "enableTreeView": true,
+        "enableLazyLoading": true,
+        "pageSize": 50,
+        "enableInlineEditing": true,
+        "visibleColumns": [
+          "status",
+          "content",
+          "priority",
+          "dueDate",
+          "startDate",
+          "scheduledDate",
+          "tags",
+          "project",
+          "context",
+          "filePath"
+        ],
+        "columnWidths": {
+          "status": 80,
+          "content": 300,
+          "priority": 100,
+          "dueDate": 120,
+          "startDate": 120,
+          "scheduledDate": 120,
+          "createdDate": 120,
+          "completedDate": 120,
+          "tags": 150,
+          "project": 150,
+          "context": 120,
+          "recurrence": 120,
+          "estimatedTime": 120,
+          "actualTime": 120,
+          "filePath": 200
+        },
+        "sortableColumns": true,
+        "resizableColumns": true,
+        "showRowNumbers": true,
+        "enableRowSelection": true,
+        "enableMultiSelect": true,
+        "defaultSortField": "",
+        "defaultSortOrder": "asc"
+      }
+    },
+    {
+      "id": "quadrant",
+      "name": "矩阵",
+      "icon": "layout-grid",
+      "type": "default",
+      "visible": false,
+      "hideCompletedAndAbandonedTasks": false,
+      "filterRules": {},
+      "filterBlanks": false,
+      "specificConfig": {
+        "viewType": "quadrant",
+        "hideEmptyQuadrants": false,
+        "autoUpdatePriority": true,
+        "autoUpdateTags": true,
+        "showTaskCount": true,
+        "defaultSortField": "priority",
+        "defaultSortOrder": "desc",
+        "urgentTag": "#urgent",
+        "importantTag": "#important",
+        "urgentThresholdDays": 3,
+        "usePriorityForClassification": false,
+        "urgentPriorityThreshold": 4,
+        "importantPriorityThreshold": 3,
+        "customQuadrantColors": false,
+        "quadrantColors": {
+          "urgentImportant": "#dc3545",
+          "notUrgentImportant": "#28a745",
+          "urgentNotImportant": "#ffc107",
+          "notUrgentNotImportant": "#6c757d"
+        }
+      }
+    }
+  ],
+  "reviewSettings": {},
+  "rewards": {
+    "enableRewards": true,
+    "rewardItems": [
+      {
+        "id": "reward-tea",
+        "name": "喝一杯好茶",
+        "occurrence": "common",
+        "inventory": -1
+      },
+      {
+        "id": "reward-series-episode",
+        "name": "观看一集喜欢的剧集",
+        "occurrence": "rare",
+        "inventory": 20
+      },
+      {
+        "id": "reward-champagne-project",
+        "name": "玩一局游戏",
+        "occurrence": "legendary",
+        "inventory": 1,
+        "condition": "#project AND #milestone"
+      },
+      {
+        "id": "reward-chocolate-quick",
+        "name": "吃一块巧克力",
+        "occurrence": "common",
+        "inventory": 10,
+        "condition": "#quickwin",
+        "imageUrl": ""
+      }
+    ],
+    "occurrenceLevels": [
+      {
+        "name": "普通",
+        "chance": 70
+      },
+      {
+        "name": "稀有",
+        "chance": 25
+      },
+      {
+        "name": "传奇",
+        "chance": 5
+      }
+    ],
+    "showRewardType": "modal"
+  },
+  "habit": {
+    "enableHabits": true,
+    "habits": []
+  },
+  "filterConfig": {
+    "enableSavedFilters": true,
+    "savedConfigs": [
+      {
+        "id": "filter-config-1752661415167-2uh297mh2",
+        "name": "忽略配置文件",
+        "description": "忽略配置文件Z-Configuration",
+        "filterState": {
+          "rootCondition": "all",
+          "filterGroups": [
+            {
+              "id": "id-1752661280008-ojx4s0d0r",
+              "groupCondition": "all",
+              "filters": [
+                {
+                  "id": "id-1752661280043-sgdt2874v",
+                  "property": "filePath",
+                  "condition": "contains",
+                  "value": "Z-Configuration"
+                }
+              ]
+            }
+          ]
+        },
+        "createdAt": "2025-07-16T10:23:35.167Z",
+        "updatedAt": "2025-07-16T10:23:35.167Z"
+      }
+    ]
+  },
+  "sortTasks": true,
+  "sortCriteria": [
+    {
+      "field": "completed",
+      "order": "asc"
+    },
+    {
+      "field": "status",
+      "order": "asc"
+    },
+    {
+      "field": "priority",
+      "order": "asc"
+    },
+    {
+      "field": "dueDate",
+      "order": "asc"
+    }
+  ],
+  "autoDateManager": {
+    "enabled": true,
+    "manageCompletedDate": true,
+    "manageStartDate": true,
+    "manageCancelledDate": true,
+    "completedDateFormat": "YYYY-MM-DD",
+    "startDateFormat": "YYYY-MM-DD",
+    "cancelledDateFormat": "YYYY-MM-DD",
+    "completedDateMarker": "✅",
+    "startDateMarker": "🚀",
+    "cancelledDateMarker": "❌"
+  },
+  "betaTest": {
+    "enableBaseView": true
+  },
+  "icsIntegration": {
+    "sources": [],
+    "globalRefreshInterval": 60,
+    "maxCacheAge": 24,
+    "enableBackgroundRefresh": false,
+    "networkTimeout": 30,
+    "maxEventsPerSource": 1000,
+    "showInCalendar": false,
+    "showInTaskLists": false,
+    "defaultEventColor": "#3b82f6"
+  },
+  "timelineSidebar": {
+    "enableTimelineSidebar": true,
+    "autoOpenOnStartup": false,
+    "showCompletedTasks": true,
+    "focusModeByDefault": false,
+    "maxEventsToShow": 100,
+    "quickInputCollapsed": false,
+    "quickInputDefaultHeight": 150,
+    "quickInputAnimationDuration": 300,
+    "quickInputCollapseOnCapture": false,
+    "quickInputShowQuickActions": true
+  },
+  "fileFilter": {
+    "enabled": false,
+    "mode": "blacklist",
+    "rules": []
+  },
+  "onCompletion": {
+    "enableOnCompletion": true,
+    "defaultArchiveFile": "Archive/Completed Tasks.md",
+    "defaultArchiveSection": "Completed Tasks",
+    "showAdvancedOptions": false
+  },
+  "timeParsing": {
+    "enabled": true,
+    "supportedLanguages": [
+      "en",
+      "zh"
+    ],
+    "dateKeywords": {
+      "start": [
+        "start",
+        "begin",
+        "from",
+        "starting",
+        "begins",
+        "开始",
+        "从",
+        "起始",
+        "起",
+        "始于",
+        "自"
+      ],
+      "due": [
+        "due",
+        "deadline",
+        "by",
+        "until",
+        "before",
+        "expires",
+        "ends",
+        "截止",
+        "到期",
+        "之前",
+        "期限",
+        "最晚",
+        "结束",
+        "终止",
+        "完成于"
+      ],
+      "scheduled": [
+        "scheduled",
+        "on",
+        "at",
+        "planned",
+        "set for",
+        "arranged",
+        "安排",
+        "计划",
+        "在",
+        "定于",
+        "预定",
+        "约定",
+        "设定"
+      ]
+    },
+    "removeOriginalText": true,
+    "perLineProcessing": true,
+    "realTimeReplacement": true
+  },
+  "taskTimer": {
+    "enabled": false,
+    "metadataDetection": {
+      "frontmatter": "task-timer",
+      "folders": [],
+      "tags": [
+        "timer",
+        "tracked"
+      ]
+    },
+    "timeFormat": "{h}hrs {m}mins",
+    "blockRefPrefix": "timer"
+  },
+  "onboarding": {
+    "completed": true,
+    "version": "9.1.5",
+    "configMode": "power",
+    "skipOnboarding": false,
+    "completedAt": "2025-07-23T02:12:52.818Z"
+  },
+  "dateMark": "📅",
+  "alwaysCycleNewTasks": false,
+  "addNumberToProgressBar": true,
+  "allowAlternateTaskStatus": false,
+  "alternativeMarks": "(x|X|-)",
+  "enhancedProjectData": {
+    "fileProjectMap": {},
+    "fileMetadataMap": {
+      "Z-DirectoryAdjustment/随时随地框架调整.md": {
+        "aliases": [
+          "随时随地框架调整"
+        ],
+        "创建时间": "2025-06-11 14:20",
+        "最新更新时间": "2025-06-11 14:20"
+      },
+      "1-CollectionBox/WeReadSync/未分类/百面机器学习 算法工程师带你去面试-诸葛越-CB_BHgAx2Aw0FKP6fd6gSB3Y9Sy.md": {
+        "cssclasses": "grid-bg",
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "CB_BHgAx2Aw0FKP6fd6gSB3Y9Sy",
+        "reviewCount": 1,
+        "noteCount": 37,
+        "author": "诸葛越",
+        "cover": "https://res.weread.qq.com/wrepub/CB_6vYFBYFE13RD6dP6cY_parsecover",
+        "readingStatus": "未标记",
+        "progress": "9%",
+        "totalReadDay": 11,
+        "readingTime": "1小时56分钟",
+        "readingDate": "2023-04-06",
+        "isbn": null,
+        "category": null,
+        "tags": [],
+        "lastReadDate": "2024-07-02",
+        "创建时间": "2025-07-21 15:16",
+        "最新更新时间": "2025-07-24 10:48"
+      },
+      "1-CollectionBox/WeReadSync/未分类/算法精解：C语言描述 (OReilly精品图书系列)-(美)Kyle Loudon.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "CB_Evt7LB7OI8Xj6g76gSCTG8xN",
+        "reviewCount": 0,
+        "noteCount": 11,
+        "author": "(美)Kyle Loudon",
+        "cover": "https://res.weread.qq.com/wrepub/CB_4lf0N90Mh4eM6eE6cZ9FdBJI_parsecover",
+        "readingStatus": "未标记",
+        "progress": "6%",
+        "totalReadDay": 7,
+        "readingTime": "1小时28分钟",
+        "readingDate": "2023-04-28",
+        "isbn": null,
+        "category": null,
+        "tags": [],
+        "lastReadDate": "2023-05-24"
+      },
+      "1-CollectionBox/WeReadSync/未分类/深入设计模式-亚历山大 · 什韦茨.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "CB_03Z1zJ1y15ZA6lU6kbEVdAMH",
+        "reviewCount": 1,
+        "noteCount": 28,
+        "author": "亚历山大 · 什韦茨",
+        "cover": "https://res.weread.qq.com/wrepub/CB_03Z1zJ1y15ZA6lU6kbEVdAMH_parsecover",
+        "readingStatus": "未标记",
+        "progress": "82%",
+        "totalReadDay": 10,
+        "readingTime": "2小时45分钟",
+        "readingDate": "2024-01-05",
+        "isbn": null,
+        "category": null,
+        "tags": [],
+        "lastReadDate": "2024-04-26"
+      },
+      "1-CollectionBox/WeReadSync/经济理财/转型中的地方政府：官员激励与治理(第二版)-周黎安.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "30243961",
+        "reviewCount": 0,
+        "noteCount": 24,
+        "author": "周黎安",
+        "cover": "https://cdn.weread.qq.com/weread/cover/72/YueWen_30243961/t7_YueWen_30243961.jpg",
+        "readingStatus": "在读",
+        "progress": "36%",
+        "totalReadDay": 8,
+        "readingTime": "9小时15分钟",
+        "readingDate": "2022-12-17",
+        "isbn": 9787543227651,
+        "category": "经济理财-财经",
+        "tags": [],
+        "lastReadDate": "2023-03-26"
+      },
+      "1-CollectionBox/WeReadSync/经济理财/跨境电商亚马逊是如何运营的：从零做到年销千万实操手册-宁芳儒.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "41846764",
+        "reviewCount": 1,
+        "noteCount": 29,
+        "author": "宁芳儒",
+        "cover": "https://cdn.weread.qq.com/weread/cover/40/YueWen_41846764/t7_YueWen_41846764.jpg",
+        "readingStatus": "在读",
+        "progress": "15%",
+        "totalReadDay": 6,
+        "readingTime": "2小时6分钟",
+        "readingDate": "2024-06-21",
+        "isbn": 9787115565068,
+        "category": "经济理财-商业",
+        "tags": [],
+        "lastReadDate": "2024-06-25",
+        "创建时间": "2025-04-09 13:07",
+        "最新更新时间": "2025-07-17 16:37"
+      },
+      "1-CollectionBox/WeReadSync/经济理财/以奋斗者为本-黄卫伟等.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "26720003",
+        "reviewCount": 0,
+        "noteCount": 27,
+        "author": "黄卫伟等",
+        "cover": "https://cdn.weread.qq.com/weread/cover/30/YueWen_26720003/t7_YueWen_26720003.jpg",
+        "readingStatus": "未标记",
+        "progress": "-1",
+        "totalReadDay": 1,
+        "readingTime": "0小时0分钟",
+        "readingDate": "2023-11-15",
+        "isbn": 9787508647791,
+        "category": "经济理财-财经",
+        "tags": [],
+        "lastReadDate": "2023-11-16"
+      },
+      "1-CollectionBox/WeReadSync/计算机/机器学习实战：基于Scikit-Learn、Keras和TensorFlow（原书第2版）-【法】奥雷利安·杰龙.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "34141393",
+        "reviewCount": 0,
+        "noteCount": 12,
+        "author": "【法】奥雷利安·杰龙",
+        "cover": "https://cdn.weread.qq.com/weread/cover/84/YueWen_34141393/t7_YueWen_34141393.jpg",
+        "readingStatus": "在读",
+        "progress": "37%",
+        "totalReadDay": 4,
+        "readingTime": "0小时52分钟",
+        "readingDate": "2023-03-30",
+        "isbn": 9787111665977,
+        "category": "计算机-人工智能",
+        "tags": [],
+        "lastReadDate": "2023-04-10"
+      },
+      "1-CollectionBox/WeReadSync/计算机/计算机视觉40例从入门到深度学习（OpenCV-Python）-李立宗.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300024799",
+        "reviewCount": 1,
+        "noteCount": 114,
+        "author": "李立宗",
+        "cover": "https://cdn.weread.qq.com/weread/cover/99/3300024799/t7_3300024799.jpg",
+        "readingStatus": "在读",
+        "progress": "38%",
+        "totalReadDay": 7,
+        "readingTime": "3小时52分钟",
+        "readingDate": "2023-04-11",
+        "isbn": 9787121436857,
+        "category": "计算机-人工智能",
+        "tags": [],
+        "lastReadDate": "2023-06-05"
+      },
+      "1-CollectionBox/WeReadSync/计算机/自然语言处理实战：预训练模型应用及其产品化-安库·A. 帕特尔 阿贾伊·乌皮利·阿拉萨尼帕莱.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300024063",
+        "reviewCount": 0,
+        "noteCount": 180,
+        "author": "安库·A. 帕特尔 阿贾伊·乌皮利·阿拉萨尼帕莱",
+        "cover": "https://cdn.weread.qq.com/weread/cover/63/3300024063/t7_3300024063.jpg",
+        "readingStatus": "在读",
+        "progress": "99%",
+        "totalReadDay": 5,
+        "readingTime": "5小时24分钟",
+        "readingDate": "2023-05-08",
+        "isbn": 9787111707912,
+        "category": "计算机-计算机综合",
+        "tags": [],
+        "lastReadDate": "2023-07-05"
+      },
+      "1-CollectionBox/WeReadSync/计算机/程序员的自我修养-陈逸鹤.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "920691",
+        "reviewCount": 0,
+        "noteCount": 10,
+        "author": "陈逸鹤",
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/691/920691/t7_920691.jpg",
+        "readingStatus": "在读",
+        "progress": "32%",
+        "totalReadDay": 2,
+        "readingTime": "0小时38分钟",
+        "readingDate": "2024-06-18",
+        "isbn": 9787302468080,
+        "category": "计算机-理论知识",
+        "tags": [],
+        "lastReadDate": "2024-06-19"
+      },
+      "1-CollectionBox/WeReadSync/计算机/自然语言处理实践：聊天机器人技术原理与应用-王昊奋 邵浩等编著.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "25462702",
+        "reviewCount": 0,
+        "noteCount": 75,
+        "author": "王昊奋 邵浩等编著",
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/702/25462702/t7_25462702.jpg",
+        "readingStatus": "在读",
+        "progress": "70%",
+        "totalReadDay": 4,
+        "readingTime": "1小时58分钟",
+        "readingDate": "2023-07-04",
+        "isbn": 9787121357152,
+        "category": "计算机-人工智能",
+        "tags": [],
+        "lastReadDate": "2023-07-04"
+      },
+      "1-CollectionBox/WeReadSync/计算机/网络是怎样连接的-户根勤.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "907755",
+        "reviewCount": 1,
+        "noteCount": 51,
+        "author": "户根勤",
+        "cover": "https://cdn.weread.qq.com/weread/cover/15/YueWen_907755/t7_YueWen_907755.jpg",
+        "readingStatus": "在读",
+        "progress": "19%",
+        "totalReadDay": 24,
+        "readingTime": "6小时58分钟",
+        "readingDate": "2023-07-12",
+        "isbn": 9787115441249,
+        "category": "计算机-计算机综合",
+        "tags": [],
+        "lastReadDate": "2024-03-15"
+      },
+      "1-CollectionBox/WeReadSync/计算机/深度学习：算法入门与Keras编程实践-李易.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "37072382",
+        "reviewCount": 0,
+        "noteCount": 13,
+        "author": "李易",
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/382/37072382/t7_37072382.jpg",
+        "readingStatus": "在读",
+        "progress": "16%",
+        "totalReadDay": 3,
+        "readingTime": "0小时49分钟",
+        "readingDate": "2023-04-10",
+        "isbn": 9787111674153,
+        "category": "计算机-编程设计",
+        "tags": [],
+        "lastReadDate": "2023-04-12"
+      },
+      "1-CollectionBox/WeReadSync/计算机/程序员超强大脑-费莉安·赫尔曼斯.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300063612",
+        "reviewCount": 0,
+        "noteCount": 22,
+        "author": "费莉安·赫尔曼斯",
+        "cover": "https://cdn.weread.qq.com/weread/cover/16/cpplatform_7qvbboyzj7gpqz9nsgl1s3/t7_cpplatform_7qvbboyzj7gpqz9nsgl1s31688723779.jpg",
+        "readingStatus": "在读",
+        "progress": "27%",
+        "totalReadDay": 1,
+        "readingTime": "1小时12分钟",
+        "readingDate": "2023-07-11",
+        "isbn": 9787115614162,
+        "category": "计算机-计算机综合",
+        "tags": [],
+        "lastReadDate": "2024-06-19"
+      },
+      "1-CollectionBox/WeReadSync/计算机/程序员的思维修炼：开发认知潜能的九堂课-Andy Hunt.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "26211883",
+        "reviewCount": 1,
+        "noteCount": 101,
+        "author": "Andy Hunt",
+        "cover": "https://cdn.weread.qq.com/weread/cover/1/YueWen_26211883/t6_YueWen_26211883.jpg",
+        "progress": "99%",
+        "readingTime": "8小时44分钟",
+        "readingDate": "2025-04-09",
+        "finishedDate": "2025-05-16",
+        "isbn": 9787115242334,
+        "category": "计算机-理论知识",
+        "lastReadDate": "2025-05-16"
+      },
+      "1-CollectionBox/WeReadSync/计算机/机器学习：公式推导与代码实现-鲁伟编著.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "44579026",
+        "reviewCount": 0,
+        "noteCount": 18,
+        "author": "鲁伟编著",
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/26/44579026/t7_44579026.jpg",
+        "readingStatus": "在读",
+        "progress": "75%",
+        "totalReadDay": 7,
+        "readingTime": "1小时26分钟",
+        "readingDate": "2023-04-01",
+        "isbn": 9787115579522,
+        "category": "计算机-人工智能",
+        "tags": [],
+        "lastReadDate": "2023-07-07",
+        "创建时间": "2025-04-09 13:07",
+        "最新更新时间": "2025-07-17 16:37"
+      },
+      "1-CollectionBox/WeReadSync/计算机/深度学习之PyTorch物体检测实战-董洪义.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "27371394",
+        "reviewCount": 0,
+        "noteCount": 136,
+        "author": "董洪义",
+        "cover": "https://cdn.weread.qq.com/weread/cover/54/yuewen_27371394/t7_yuewen_273713941735115142.jpg",
+        "readingStatus": "在读",
+        "progress": "56%",
+        "totalReadDay": 14,
+        "readingTime": "6小时40分钟",
+        "readingDate": "2023-04-03",
+        "isbn": 9787111641742,
+        "category": "计算机-人工智能",
+        "tags": [],
+        "lastReadDate": "2023-05-30"
+      },
+      "1-CollectionBox/WeReadSync/计算机/PyTorch生成对抗网络编程-塔里克·拉希德.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "35786176",
+        "reviewCount": 1,
+        "noteCount": 125,
+        "author": "塔里克·拉希德",
+        "cover": "https://cdn.weread.qq.com/weread/cover/1/YueWen_35786176/t7_YueWen_35786176.jpg",
+        "readingStatus": "读完",
+        "progress": "93%",
+        "totalReadDay": 25,
+        "readingTime": "10小时28分钟",
+        "readingDate": "2023-03-30",
+        "finishedDate": "2023-05-11",
+        "isbn": 9787115546388,
+        "category": "计算机-编程设计",
+        "tags": [],
+        "lastReadDate": "2023-05-11"
+      },
+      "1-CollectionBox/WeReadSync/计算机/实战机器学习-鲍亮 崔江涛 李倩.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300047296",
+        "reviewCount": 0,
+        "noteCount": 12,
+        "author": "鲍亮 崔江涛 李倩",
+        "cover": "https://cdn.weread.qq.com/weread/cover/7/cpplatform_t4xjjmfc1gjjsv4vrk7wnp/t7_cpplatform_t4xjjmfc1gjjsv4vrk7wnp1675243113.jpg",
+        "readingStatus": "在读",
+        "progress": "32%",
+        "totalReadDay": 1,
+        "readingTime": "0小时17分钟",
+        "readingDate": "2023-07-04",
+        "isbn": 9787302591214,
+        "category": "计算机-编程设计",
+        "tags": [],
+        "lastReadDate": "2023-07-04"
+      },
+      "1-CollectionBox/WeReadSync/计算机/Python神经网络编程-塔里克·拉希德.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "22655611",
+        "reviewCount": 3,
+        "noteCount": 66,
+        "author": "塔里克·拉希德",
+        "cover": "https://cdn.weread.qq.com/weread/cover/56/YueWen_22655611/t7_YueWen_22655611.jpg",
+        "readingStatus": "读完",
+        "progress": "99%",
+        "totalReadDay": 10,
+        "readingTime": "8小时9分钟",
+        "readingDate": "2023-03-25",
+        "finishedDate": "2023-04-20",
+        "isbn": 9787115474810,
+        "category": "计算机-人工智能",
+        "tags": [],
+        "lastReadDate": "2023-04-22"
+      },
+      "1-CollectionBox/WeReadSync/计算机/从零开始玩转ChatGPT-小岩井.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300059745",
+        "reviewCount": 0,
+        "noteCount": 70,
+        "author": "小岩井",
+        "cover": "https://cdn.weread.qq.com/weread/cover/79/cpplatform_7zc4xeghfuvtfnfio1huvu/t7_cpplatform_7zc4xeghfuvtfnfio1huvu1684997471.jpg",
+        "readingStatus": "在读",
+        "progress": "90%",
+        "totalReadDay": 4,
+        "readingTime": "1小时47分钟",
+        "readingDate": "2023-05-28",
+        "isbn": null,
+        "category": "计算机-软件学习",
+        "tags": [],
+        "lastReadDate": "2023-07-02"
+      },
+      "1-CollectionBox/WeReadSync/计算机/PyTorch深度学习简明实战-日月光华.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300047242",
+        "reviewCount": 0,
+        "noteCount": 51,
+        "author": "日月光华",
+        "cover": "https://cdn.weread.qq.com/weread/cover/71/cpplatform_hspn2p5i1qyt1qcyzew3rc/t7_cpplatform_hspn2p5i1qyt1qcyzew3rc1675240147.jpg",
+        "readingStatus": "在读",
+        "progress": "21%",
+        "totalReadDay": 10,
+        "readingTime": "2小时53分钟",
+        "readingDate": "2023-04-12",
+        "isbn": 9787302619840,
+        "category": "计算机-编程设计",
+        "tags": [],
+        "lastReadDate": "2023-06-16"
+      },
+      "1-CollectionBox/WeReadSync/计算机/Python机器学习入门与实战-桑园　.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300052158",
+        "reviewCount": 0,
+        "noteCount": 12,
+        "author": "桑园",
+        "cover": "https://cdn.weread.qq.com/weread/cover/58/cpplatform_tcxkgcjqcgaskkvrubahtp/t7_cpplatform_tcxkgcjqcgaskkvrubahtp1678713258.jpg",
+        "readingStatus": "在读",
+        "progress": "99%",
+        "totalReadDay": 8,
+        "readingTime": "1小时16分钟",
+        "readingDate": "2023-04-07",
+        "isbn": 9787115601902,
+        "category": "计算机-计算机综合",
+        "tags": [],
+        "lastReadDate": "2023-06-09"
+      },
+      "1-CollectionBox/WeReadSync/计算机/Linux命令行与shell脚本编程大全（第4版）-理查德·布卢姆  克里斯蒂娜·布雷斯纳汉　著.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300024030",
+        "reviewCount": 0,
+        "noteCount": 12,
+        "author": "理查德·布卢姆  克里斯蒂娜·布雷斯纳汉　著",
+        "cover": "https://cdn.weread.qq.com/weread/cover/30/3300024030/t7_3300024030.jpg",
+        "readingStatus": "在读",
+        "progress": "1%",
+        "totalReadDay": 3,
+        "readingTime": "0小时54分钟",
+        "readingDate": "2023-04-21",
+        "isbn": 9787115592514,
+        "category": "计算机-编程设计",
+        "tags": [],
+        "lastReadDate": "2023-06-10"
+      },
+      "1-CollectionBox/WeReadSync/计算机/Python 3反爬虫原理与绕过实战-韦世东.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "34336697",
+        "reviewCount": 0,
+        "noteCount": 15,
+        "author": "韦世东",
+        "cover": "https://cdn.weread.qq.com/weread/cover/27/YueWen_34336697/t7_YueWen_34336697.jpg",
+        "readingStatus": "在读",
+        "progress": "12%",
+        "totalReadDay": 3,
+        "readingTime": "0小时52分钟",
+        "readingDate": "2023-07-07",
+        "isbn": 9787115528735,
+        "category": "计算机-编程设计",
+        "tags": [],
+        "lastReadDate": "2023-07-11"
+      },
+      "1-CollectionBox/WeReadSync/计算机/Python王者归来-洪锦魁.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "31794412",
+        "reviewCount": 0,
+        "noteCount": 11,
+        "author": "洪锦魁",
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/412/31794412/t7_31794412.jpg",
+        "readingStatus": "读过",
+        "progress": "34%",
+        "totalReadDay": 2,
+        "readingTime": "0小时20分钟",
+        "readingDate": "2023-04-11",
+        "isbn": 9787302513346,
+        "category": "计算机-编程设计",
+        "tags": [],
+        "lastReadDate": "2023-04-25"
+      },
+      "1-CollectionBox/WeReadSync/计算机/JavaScript DOM编程艺术(第2版)-Jeremy Keith  Jeffrey Sambells.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "27337558",
+        "reviewCount": 0,
+        "noteCount": 48,
+        "author": "Jeremy Keith  Jeffrey Sambells",
+        "cover": "https://cdn.weread.qq.com/weread/cover/94/YueWen_27337558/t7_YueWen_27337558.jpg",
+        "readingStatus": "在读",
+        "progress": "37%",
+        "totalReadDay": 5,
+        "readingTime": "3小时43分钟",
+        "readingDate": "2024-06-19",
+        "isbn": 9787115249999,
+        "category": "计算机-编程设计",
+        "tags": [],
+        "lastReadDate": "2024-06-20"
+      },
+      "1-CollectionBox/WeReadSync/计算机/Flask Web开发：基于Python的Web应用开发实战（第2版）-米格尔·格林贝格.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "26211799",
+        "reviewCount": 0,
+        "noteCount": 52,
+        "author": "米格尔·格林贝格",
+        "cover": "https://cdn.weread.qq.com/weread/cover/77/YueWen_26211799/t7_YueWen_26211799.jpg",
+        "readingStatus": "在读",
+        "progress": "73%",
+        "totalReadDay": 3,
+        "readingTime": "2小时10分钟",
+        "readingDate": "2023-07-10",
+        "isbn": 9787115489456,
+        "category": "计算机-编程设计",
+        "tags": [],
+        "lastReadDate": "2023-07-12"
+      },
+      "1-CollectionBox/WeReadSync/计算机/ChatGPT使用指南：人人都应该掌握的AI最强工具-苏江.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300060717",
+        "reviewCount": 0,
+        "noteCount": 49,
+        "author": "苏江",
+        "cover": "https://cdn.weread.qq.com/weread/cover/84/cpplatform_v8t5ppwuiwtvdwr3t6p941/t7_cpplatform_v8t5ppwuiwtvdwr3t6p9411685950390.jpg",
+        "readingStatus": "在读",
+        "progress": "60%",
+        "totalReadDay": 12,
+        "readingTime": "1小时32分钟",
+        "readingDate": "2023-06-05",
+        "isbn": 9787576323337,
+        "category": "计算机-人工智能",
+        "tags": [],
+        "lastReadDate": "2023-06-29"
+      },
+      "1-CollectionBox/WeReadSync/科学技术/ChatGPT 速通手册-饶琛琳  王秋实.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300062548",
+        "reviewCount": 0,
+        "noteCount": 54,
+        "author": "饶琛琳  王秋实",
+        "cover": "https://cdn.weread.qq.com/weread/cover/92/cpplatform_mt2qs743ag4y5zkn9rjqqn/t7_cpplatform_mt2qs743ag4y5zkn9rjqqn1687763095.jpg",
+        "readingStatus": "在读",
+        "progress": "97%",
+        "totalReadDay": 4,
+        "readingTime": "1小时50分钟",
+        "readingDate": "2023-06-28",
+        "isbn": 9787121457319,
+        "category": "科学技术-工业技术",
+        "tags": [],
+        "lastReadDate": "2023-06-30"
+      },
+      "1-CollectionBox/WeReadSync/科学技术/生命是宇宙的偶然吗-罗伊·古尔德.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300030954",
+        "reviewCount": 1,
+        "noteCount": 43,
+        "author": "罗伊·古尔德",
+        "cover": "https://cdn.weread.qq.com/weread/cover/40/cpPlatform_jBUDgH341JFLCVYQNY8ViZ/t7_cpPlatform_jBUDgH341JFLCVYQNY8ViZ.jpg",
+        "readingStatus": "读完",
+        "progress": "100%",
+        "totalReadDay": 31,
+        "readingTime": "11小时17分钟",
+        "readingDate": "2023-11-17",
+        "finishedDate": "2024-01-18",
+        "isbn": 9787543986268,
+        "category": "科学技术-科学科普",
+        "tags": [],
+        "lastReadDate": "2024-02-24"
+      },
+      "1-CollectionBox/WeReadSync/科学技术/白话机器学习的数学-立石贤吾.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "32670897",
+        "reviewCount": 4,
+        "noteCount": 107,
+        "author": "立石贤吾",
+        "cover": "https://cdn.weread.qq.com/weread/cover/74/YueWen_32670897/t7_YueWen_32670897.jpg",
+        "readingStatus": "在读",
+        "progress": "68%",
+        "totalReadDay": 15,
+        "readingTime": "9小时22分钟",
+        "readingDate": "2023-03-24",
+        "isbn": 9787115536211,
+        "category": "科学技术-自然科学",
+        "tags": [],
+        "lastReadDate": "2023-04-17"
+      },
+      "1-CollectionBox/WeReadSync/科学技术/烧掉数学书：重新发明数学-杰森·威尔克斯.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "39888734",
+        "reviewCount": 0,
+        "noteCount": 10,
+        "author": "杰森·威尔克斯",
+        "cover": "https://cdn.weread.qq.com/weread/cover/62/YueWen_39888734/t7_YueWen_39888734.jpg",
+        "readingStatus": "在读",
+        "progress": "8%",
+        "totalReadDay": 13,
+        "readingTime": "1小时6分钟",
+        "readingDate": "2023-11-22",
+        "isbn": 9787571004071,
+        "category": "科学技术-自然科学",
+        "tags": [],
+        "lastReadDate": "2024-07-22"
+      },
+      "1-CollectionBox/WeReadSync/科学技术/宇宙-卡尔·萨根.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "39457314",
+        "reviewCount": 0,
+        "noteCount": 12,
+        "author": "卡尔·萨根",
+        "cover": "https://cdn.weread.qq.com/weread/cover/54/YueWen_39457314/t7_YueWen_39457314.jpg",
+        "readingStatus": "在读",
+        "progress": "46%",
+        "totalReadDay": 9,
+        "readingTime": "4小时52分钟",
+        "readingDate": "2023-04-26",
+        "isbn": 9787543982888,
+        "category": "科学技术-科学科普",
+        "tags": [],
+        "lastReadDate": "2023-04-28"
+      },
+      "1-CollectionBox/WeReadSync/教育学习/学习的逻辑：中学生高效学习策略体系-叶修.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "38088024",
+        "reviewCount": 0,
+        "noteCount": 26,
+        "author": "叶修",
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/24/38088024/t7_38088024.jpg",
+        "readingStatus": "读完",
+        "progress": "100%",
+        "totalReadDay": 13,
+        "readingTime": "4小时20分钟",
+        "readingDate": "2023-09-08",
+        "finishedDate": "2023-10-12",
+        "isbn": 9787521722116,
+        "category": "教育学习-教育",
+        "tags": [],
+        "lastReadDate": "2023-10-09"
+      },
+      "1-CollectionBox/WeReadSync/教育学习/如何阅读一本书-莫提默·艾德勒 查尔斯·范多伦.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "23723810",
+        "reviewCount": 0,
+        "noteCount": 152,
+        "author": "莫提默·艾德勒 查尔斯·范多伦",
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/810/23723810/t6_23723810.jpg",
+        "progress": "71%",
+        "readingTime": "4小时42分钟",
+        "readingDate": "2024-05-31",
+        "isbn": 9787100106184,
+        "category": "教育学习-教育",
+        "lastReadDate": "2025-05-31"
+      },
+      "1-CollectionBox/WeReadSync/个人成长/职场高效阅读：成为高手的实用阅读秘籍-朱晓华.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300056202",
+        "reviewCount": 3,
+        "noteCount": 155,
+        "author": "朱晓华",
+        "cover": "https://cdn.weread.qq.com/weread/cover/13/cpplatform_hkemkz36grotzjcayeklw5/t7_cpplatform_hkemkz36grotzjcayeklw51681897025.jpg",
+        "readingStatus": "读完",
+        "progress": "99%",
+        "totalReadDay": 19,
+        "readingTime": "12小时2分钟",
+        "readingDate": "2024-05-16",
+        "finishedDate": "2024-05-27",
+        "isbn": 9787111706977,
+        "category": "个人成长-认知思维",
+        "tags": [],
+        "lastReadDate": "2024-06-02"
+      },
+      "1-CollectionBox/WeReadSync/个人成长/给大忙人的高效阅读课-李源.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "26678294",
+        "reviewCount": 2,
+        "noteCount": 164,
+        "author": "李源",
+        "cover": "https://cdn.weread.qq.com/weread/cover/30/YueWen_26678294/t7_YueWen_26678294.jpg",
+        "readingStatus": "读完",
+        "progress": "99%",
+        "totalReadDay": 8,
+        "readingTime": "7小时25分钟",
+        "readingDate": "2024-06-05",
+        "finishedDate": "2024-06-14",
+        "isbn": 9787571304683,
+        "category": "个人成长-认知思维",
+        "tags": [],
+        "lastReadDate": "2024-06-19"
+      },
+      "1-CollectionBox/WeReadSync/个人成长/穿透式学习-方军.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "30573161",
+        "reviewCount": 0,
+        "noteCount": 17,
+        "author": "方军",
+        "cover": "https://cdn.weread.qq.com/weread/cover/8/YueWen_30573161/t7_YueWen_30573161.jpg",
+        "readingStatus": "在读",
+        "progress": "42%",
+        "totalReadDay": 9,
+        "readingTime": "3小时3分钟",
+        "readingDate": "2025-02-25",
+        "isbn": 9787111649120,
+        "category": "个人成长-人在职场",
+        "tags": [],
+        "lastReadDate": "2025-03-15"
+      },
+      "1-CollectionBox/WeReadSync/个人成长/秘书工作手记（套装共2册）-像玉的石头.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "27111583",
+        "reviewCount": 0,
+        "noteCount": 24,
+        "author": "像玉的石头",
+        "cover": "https://cdn.weread.qq.com/weread/cover/92/yuewen_27111583/t7_yuewen_271115831678435639.jpg",
+        "readingStatus": "在读",
+        "progress": "3%",
+        "totalReadDay": 8,
+        "readingTime": "0小时42分钟",
+        "readingDate": "2024-06-26",
+        "isbn": null,
+        "category": "个人成长-人在职场",
+        "tags": [],
+        "lastReadDate": "2024-08-06"
+      },
+      "1-CollectionBox/WeReadSync/个人成长/寻觅意义-王德峰.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300038402",
+        "reviewCount": 0,
+        "noteCount": 11,
+        "author": "王德峰",
+        "cover": "https://cdn.weread.qq.com/weread/cover/86/cpPlatform_dBA8CcERMXPBuGgTkn8zF2/t7_cpPlatform_dBA8CcERMXPBuGgTkn8zF2.jpg",
+        "readingStatus": "读完",
+        "progress": "100%",
+        "totalReadDay": 11,
+        "readingTime": "10小时52分钟",
+        "readingDate": "2022-12-01",
+        "finishedDate": "2023-03-27",
+        "isbn": 9787532967254,
+        "category": "个人成长-人生哲学",
+        "tags": [],
+        "lastReadDate": "2023-07-27"
+      },
+      "1-CollectionBox/WeReadSync/个人成长/基层女性（探讨关于爱、金钱与精神世界的建立）-王慧玲.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "40133507",
+        "reviewCount": 0,
+        "noteCount": 21,
+        "author": "王慧玲",
+        "cover": "https://cdn.weread.qq.com/weread/cover/95/YueWen_40133507/t7_YueWen_40133507.jpg",
+        "readingStatus": "在读",
+        "progress": "65%",
+        "totalReadDay": 5,
+        "readingTime": "1小时33分钟",
+        "readingDate": "2024-08-14",
+        "isbn": 9787505752405,
+        "category": "个人成长-女性成长",
+        "tags": [],
+        "lastReadDate": "2024-10-05"
+      },
+      "1-CollectionBox/WeReadSync/个人成长/刻意练习：如何从新手到大师-【美】安德斯·艾利克森 【英】罗伯特·普尔.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "843464",
+        "reviewCount": 0,
+        "noteCount": 11,
+        "author": "【美】安德斯·艾利克森 【英】罗伯特·普尔",
+        "cover": "https://cdn.weread.qq.com/weread/cover/95/YueWen_843464/t7_YueWen_843464.jpg",
+        "readingStatus": "在读",
+        "progress": "11%",
+        "totalReadDay": 3,
+        "readingTime": "0小时49分钟",
+        "readingDate": "2024-05-23",
+        "isbn": 9787111551287,
+        "category": "个人成长-人生哲学",
+        "tags": [],
+        "lastReadDate": "2024-06-26"
+      },
+      "1-CollectionBox/WeReadSync/政治军事/问道马克思：为什么信仰马克思主义？-董振华.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "42835189",
+        "reviewCount": 0,
+        "noteCount": 23,
+        "author": "董振华",
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/189/42835189/t7_42835189.jpg",
+        "readingStatus": "在读",
+        "progress": "98%",
+        "totalReadDay": 7,
+        "readingTime": "1小时23分钟",
+        "readingDate": "2022-12-07",
+        "isbn": 9787219111628,
+        "category": "政治军事-政治",
+        "tags": [],
+        "lastReadDate": "2023-03-26"
+      },
+      "1-CollectionBox/WeReadSync/政治军事/思维的法则-陈培永.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "34063276",
+        "reviewCount": 0,
+        "noteCount": 15,
+        "author": "陈培永",
+        "cover": "https://cdn.weread.qq.com/weread/cover/1/YueWen_34063276/t7_YueWen_34063276.jpg",
+        "readingStatus": "读完",
+        "progress": "100%",
+        "totalReadDay": 6,
+        "readingTime": "2小时35分钟",
+        "readingDate": "2023-06-13",
+        "finishedDate": "2023-06-17",
+        "isbn": 9787218095387,
+        "category": "政治军事-政治",
+        "tags": [],
+        "lastReadDate": "2023-08-30"
+      },
+      "1-CollectionBox/WeReadSync/政治军事/毛泽东自述-毛泽东.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300033212",
+        "reviewCount": 3,
+        "noteCount": 24,
+        "author": "毛泽东",
+        "cover": "https://cdn.weread.qq.com/weread/cover/66/cpPlatform_3DiDHfkM253f2QpHJZJBDv/t7_cpPlatform_3DiDHfkM253f2QpHJZJBDv.jpg",
+        "readingStatus": "在读",
+        "progress": "41%",
+        "totalReadDay": 13,
+        "readingTime": "3小时34分钟",
+        "readingDate": "2024-09-05",
+        "isbn": 7010014930,
+        "category": "政治军事-政治",
+        "tags": [],
+        "lastReadDate": "2024-11-04"
+      },
+      "1-CollectionBox/WeReadSync/政治军事/学《矛盾论》用《矛盾论》-李立.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "25010997",
+        "reviewCount": 0,
+        "noteCount": 13,
+        "author": "李立",
+        "cover": "https://cdn.weread.qq.com/weread/cover/95/YueWen_25010997/t7_YueWen_25010997.jpg",
+        "readingStatus": "在读",
+        "progress": "8%",
+        "totalReadDay": 5,
+        "readingTime": "0小时43分钟",
+        "readingDate": "2023-03-13",
+        "isbn": 9787505123106,
+        "category": "政治军事-政治",
+        "tags": [],
+        "lastReadDate": "2023-03-30",
+        "aliases": [
+          "学《矛盾论》用《矛盾论》-李立"
+        ],
+        "创建时间": "2025-04-09 13:07",
+        "最新更新时间": "2025-07-09 10:18"
+      },
+      "1-CollectionBox/WeReadSync/政治军事/中国历代政治得失-钱穆.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "23523072",
+        "reviewCount": 0,
+        "noteCount": 19,
+        "author": "钱穆",
+        "cover": "https://cdn.weread.qq.com/weread/cover/54/yuewen_23523072/t7_yuewen_235230721689681600.jpg",
+        "readingStatus": "读完",
+        "progress": "97%",
+        "totalReadDay": 7,
+        "readingTime": "1小时52分钟",
+        "readingDate": "2024-06-04",
+        "finishedDate": "2024-07-01",
+        "isbn": 9787510812675,
+        "category": "政治军事-政治",
+        "tags": [],
+        "lastReadDate": "2024-06-10"
+      },
+      "1-CollectionBox/WeReadSync/政治军事/《资本论》的读法-杨照.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300043860",
+        "reviewCount": 3,
+        "noteCount": 57,
+        "author": "杨照",
+        "cover": "https://cdn.weread.qq.com/weread/cover/56/cpPlatform_uyr36Ujxn1Z6kbKk9PBx9y/t7_cpPlatform_uyr36Ujxn1Z6kbKk9PBx9y.jpg",
+        "readingStatus": "在读",
+        "progress": "14%",
+        "totalReadDay": 19,
+        "readingTime": "6小时38分钟",
+        "readingDate": "2024-04-05",
+        "isbn": 9787573005687,
+        "category": "政治军事-政治",
+        "tags": [],
+        "lastReadDate": "2024-05-02"
+      },
+      "1-CollectionBox/WeReadSync/哲学宗教/简单的逻辑学（新版）-D.Q.麦克伦尼.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300059465",
+        "reviewCount": 0,
+        "noteCount": 52,
+        "author": "D.Q.麦克伦尼",
+        "cover": "https://cdn.weread.qq.com/weread/cover/45/cpplatform_ktzrcrwh9ftrdgiu2sxkrm/t7_cpplatform_ktzrcrwh9ftrdgiu2sxkrm1684812979.jpg",
+        "readingStatus": "在读",
+        "progress": "32%",
+        "totalReadDay": 3,
+        "readingTime": "1小时41分钟",
+        "readingDate": "2024-08-05",
+        "isbn": 9787573905949,
+        "category": "哲学宗教-逻辑学",
+        "tags": [],
+        "lastReadDate": "2024-10-05"
+      },
+      "1-CollectionBox/WeReadSync/哲学宗教/中国哲学简史-冯友兰.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "651358",
+        "reviewCount": 26,
+        "noteCount": 134,
+        "author": "冯友兰",
+        "cover": "https://cdn.weread.qq.com/weread/cover/24/YueWen_651358/t7_YueWen_651358.jpg",
+        "readingStatus": "读完",
+        "progress": "100%",
+        "totalReadDay": 28,
+        "readingTime": "27小时1分钟",
+        "readingDate": "2022-11-29",
+        "finishedDate": "2023-03-23",
+        "isbn": 9787301215692,
+        "category": "哲学宗教-东方哲学",
+        "tags": [],
+        "lastReadDate": "2023-03-23",
+        "创建时间": "2025-07-21 15:16",
+        "最新更新时间": "2025-07-21 18:12"
+      },
+      "1-CollectionBox/WeReadSync/哲学宗教/中国哲学史(第2版)(博雅大学堂·哲学)-北大哲学系中国哲学教研室.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "24272632",
+        "reviewCount": 1,
+        "noteCount": 133,
+        "author": "北大哲学系中国哲学教研室",
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/632/24272632/t7_24272632.jpg",
+        "readingStatus": "在读",
+        "progress": "99%",
+        "totalReadDay": 16,
+        "readingTime": "15小时23分钟",
+        "readingDate": "2024-09-23",
+        "isbn": 9787301049303,
+        "category": "哲学宗教-东方哲学",
+        "tags": [],
+        "lastReadDate": "2024-12-25"
+      },
+      "1-CollectionBox/WeReadSync/心理/意识的解释-丹尼尔·丹尼特.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300025245",
+        "reviewCount": 1,
+        "noteCount": 15,
+        "author": "丹尼尔·丹尼特",
+        "cover": "https://cdn.weread.qq.com/weread/cover/71/cpPlatform_3300025245/t7_cpPlatform_3300025245.jpg",
+        "readingStatus": "在读",
+        "progress": "37%",
+        "totalReadDay": 9,
+        "readingTime": "1小时27分钟",
+        "readingDate": "2024-10-30",
+        "isbn": 9787521742053,
+        "category": "心理-心理学研究",
+        "tags": [],
+        "lastReadDate": "2024-11-04"
+      },
+      "1-CollectionBox/WeReadSync/医学健康/内证观察笔记——真图本中医解剖学纲目-【清】无名氏.md": {
+        "doc_type": "weread-highlights-reviews",
+        "bookId": "3300056609",
+        "reviewCount": 0,
+        "noteCount": 26,
+        "author": "【清】无名氏",
+        "cover": "https://cdn.weread.qq.com/weread/cover/84/cpplatform_qr6atagfsjakbhvztqyd28/t7_cpplatform_qr6atagfsjakbhvztqyd281682071068.jpg",
+        "readingStatus": "读完",
+        "progress": "99%",
+        "totalReadDay": 16,
+        "readingTime": "13小时5分钟",
+        "readingDate": "2023-04-23",
+        "finishedDate": "2024-02-13",
+        "isbn": 9787563390366,
+        "category": "医学健康-健康",
+        "tags": [],
+        "lastReadDate": "2024-02-15"
+      },
+      "Z-Configuration/手机端同步.md": {
+        "参考链接": "https://forum-zh.obsidian.md/t/topic/7152",
+        "所需app": "mgit"
+      },
+      "Z-Configuration/一台电脑双GitHub账户配置.md": {
+        "aliases": [
+          "一台电脑双GitHub账户配置"
+        ],
+        "创建时间": "2025-07-09 10:05",
+        "最新更新时间": "2025-07-09 11:02"
+      },
+      "Z-Configuration/obsidian常用语法查询.md": {
+        "创建时间": "2025-02-06 20:44",
+        "最新更新时间": "2025-04-29 13:37",
+        "aliases": [
+          "obsidian常用语法查询"
+        ]
+      },
+      "Z-Configuration/0Template/概念.md": {
+        "KnowledgeTypes": "Concept"
+      },
+      "Z-Configuration/0Template/好例子记录模板.md": {
+        "来源": null,
+        "tags": [
+          "Status/Learning",
+          "GoodExample"
+        ],
+        "创建时间": null,
+        "最新更新时间": null
+      },
+      "Z-Configuration/0Template/语法笔记模板.md": {
+        "KnowledgeTypes": "Syntax",
+        "Lang": "Python",
+        "tags": [
+          "Status/Learning",
+          "Type/Syntax",
+          "Lang/Python"
+        ],
+        "创建时间": null,
+        "最新更新时间": null
+      },
+      "Z-Configuration/0Template/每月开发记录.md": {
+        "题目": "2025-07开发记录",
+        "本地位置📂": "Z-Configuration/0Template/2025-07计划更新.md",
+        "创建时间": null,
+        "最新更新时间": null
+      },
+      "Z-Configuration/0Template/DailyNote.md": {
+        "创建时间": "2025-07-09 10:05",
+        "最新更新时间": "2025-07-17 10:14",
+        "Tags": null
+      },
+      "Z-Configuration/0Template/DailyNote-topics.md": {
+        "创建时间": "2024-08-09 16:25",
+        "最新更新时间": "2024-08-21 09:39",
+        "Difficulty": "<% tp.system.suggester([\"简单\",\"中等\",\"较难\",\"困难\"],[\"简单\",\"中等\",\"较难\",\"困难\"],true,'今日难度如何？') %>",
+        "Tags": null
+      },
+      "Z-Configuration/0Template/Books (Templater Basic Version).md": {
+        "type": "books",
+        "title": "[[<% tp.file.title %>]]",
+        "cover": null,
+        "author": [
+          "[[<% tp.system.prompt(\"请输入作者\")%>]]"
+        ],
+        "genre": "<% tp.system.suggester([\"fiction\", \"non-fiction\"], [\"fiction\", \"non-fiction\"], true, 'genre')%>",
+        "status": "<% tp.system.suggester([\"to-read\", \"reading\", \"done\"], [\"to-read\", \"reading\", \"done\"], true, 'status')%>",
+        "rating": null,
+        "myRating": null,
+        "summary": null,
+        "date_creation": "<% tp.file.creation_date(\"YYYY-MM-DD\") %>",
+        "date_start": null,
+        "date_finish": null
+      },
+      "Z-Configuration/0Template/Capture.md": {
+        "aliases": [
+          "Capture"
+        ],
+        "创建时间": "2025-06-11 09:24",
+        "最新更新时间": "2025-06-11 11:23"
+      },
+      "6-Generalize/readme-Generalize.md": {
+        "aliases": [
+          "readme-Projects"
+        ],
+        "创建时间": "2025-06-11 10:54",
+        "最新更新时间": "2025-06-11 10:55"
+      },
+      "5-Practice/readme-Practice.md": {
+        "aliases": [
+          "readme-Practice",
+          "readme-Projects"
+        ],
+        "创建时间": "2025-06-11 10:54",
+        "最新更新时间": "2025-07-09 10:24"
+      },
+      "4-MainConcepts/readme-MainConcepts.md": {
+        "aliases": [
+          "readme-MainConcepts"
+        ],
+        "创建时间": "2025-06-11 10:52",
+        "最新更新时间": "2025-06-11 10:54"
+      },
+      "3-Zettelkasten/readme-Zettelkasten.md": {
+        "aliases": [
+          "readme-Zettelkasten"
+        ],
+        "创建时间": "2025-06-11 10:51",
+        "最新更新时间": "2025-07-09 10:24"
+      },
+      "2-Sandbox/20250717-适合我的阅读方法.md": {
+        "aliases": [
+          "20250717-适合我的阅读方法"
+        ],
+        "创建时间": "2025-07-17 09:26",
+        "最新更新时间": "2025-07-17 09:44"
+      },
+      "2-Sandbox/20250212-如何阅读技术类书籍.md": {
+        "tags": [
+          "阅读方法",
+          "技术类书籍"
+        ],
+        "创建时间": "2025-02-12 11:31",
+        "最新更新时间": "2025-07-09 10:44",
+        "aliases": [
+          "20250212-如何阅读技术类书籍",
+          "如何阅读技术类书籍"
+        ]
+      },
+      "2-Sandbox/20250717-是否需要结合手帐？.md": {
+        "创建时间": "2025-07-17 14:09",
+        "最新更新时间": "2025-07-17 15:40"
+      },
+      "2-Sandbox/readme-Sandbox.md": {
+        "cssclasses": "grid-bg",
+        "aliases": [
+          "readme-Sandbox",
+          "reame-Sandbox"
+        ],
+        "创建时间": "2025-06-11 10:49",
+        "最新更新时间": "2025-07-25 09:26"
+      }
+    },
+    "projectConfigMap": {}
+  }
+}

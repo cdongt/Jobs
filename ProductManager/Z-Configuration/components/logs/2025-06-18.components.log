@@ -1,0 +1,403 @@
+2025-06-18 11:11:47.878 [info] script extension loaded 0 functions from Z-Configuration/components/scripts  [object Map] 
+2025-06-18 11:11:47.986 [info] components database created cost 108 ms   
+2025-06-18 11:11:47.986 [info] components index initializing...   
+2025-06-18 11:11:48.014 [info] start to batch put pages: 1   
+2025-06-18 11:11:48.020 [info] batch persist cost 1  6 
+2025-06-18 11:11:48.026 [info] components index initialized, 98 files cost 148 ms   
+2025-06-18 11:11:48.026 [info] refresh page data from init listeners 0 98   
+2025-06-18 11:11:48.052 [info] indexing created file Z-Configuration/components/logs/2025-06-18.components.log  [object Object] 
+2025-06-18 11:11:48.053 [info] refresh page data from created listeners 0 99   
+2025-06-18 16:28:42.963 [info] indexing created file 2-Sandbox/未命名.md  [object Object] 
+2025-06-18 16:28:42.976 [info] indexing created ignore file 2-Sandbox/未命名.md   
+2025-06-18 16:28:44.587 [info] trigger 2-Sandbox/未命名.md resolve  [object Object] 
+2025-06-18 16:28:44.809 [info] index finished after resolve  [object Object] 
+2025-06-18 16:28:44.810 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:28:58.552 [info] refresh page data from rename listeners 0 100   
+2025-06-18 16:29:08.261 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:29:08.271 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:29:08.272 [info] index finished after resolve  [object Object] 
+2025-06-18 16:29:08.272 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:29:10.420 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:29:10.426 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:29:10.426 [info] index finished after resolve  [object Object] 
+2025-06-18 16:29:10.426 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:29:12.939 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:29:12.942 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:29:12.943 [info] index finished after resolve  [object Object] 
+2025-06-18 16:29:12.943 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:29:17.986 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:29:17.993 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:29:17.994 [info] index finished after resolve  [object Object] 
+2025-06-18 16:29:17.994 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:29:20.173 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:29:20.181 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:29:20.182 [info] index finished after resolve  [object Object] 
+2025-06-18 16:29:20.182 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:29:24.025 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:29:24.032 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:29:24.032 [info] index finished after resolve  [object Object] 
+2025-06-18 16:29:24.032 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:29:29.378 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:29:29.384 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:29:29.384 [info] index finished after resolve  [object Object] 
+2025-06-18 16:29:29.385 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:10.117 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:10.143 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:10.145 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:10.145 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:12.155 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:12.161 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:12.162 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:12.163 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:14.281 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:14.284 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:14.285 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:14.285 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:16.468 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:16.474 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:16.476 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:16.476 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:18.607 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:18.620 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:18.623 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:18.624 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:20.662 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:20.665 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:20.665 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:20.665 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:24.612 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:24.628 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:24.628 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:24.628 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:26.793 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:26.851 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:26.853 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:26.854 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:29.202 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:29.208 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:29.209 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:29.209 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:36.663 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:36.726 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:36.728 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:36.728 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:39.972 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:39.976 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:39.977 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:39.977 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:45.408 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:45.413 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:45.415 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:45.415 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:47.861 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:47.864 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:47.865 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:47.865 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:50.087 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:50.091 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:50.091 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:50.091 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:30:52.202 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:30:52.234 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:30:52.241 [info] index finished after resolve  [object Object] 
+2025-06-18 16:30:52.241 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:31:09.552 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:31:09.557 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:31:09.557 [info] index finished after resolve  [object Object] 
+2025-06-18 16:31:09.557 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:31:12.344 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:31:12.348 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:31:12.348 [info] index finished after resolve  [object Object] 
+2025-06-18 16:31:12.348 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:31:14.459 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:31:14.464 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:31:14.465 [info] index finished after resolve  [object Object] 
+2025-06-18 16:31:14.465 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:31:16.498 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:31:16.501 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:31:16.502 [info] index finished after resolve  [object Object] 
+2025-06-18 16:31:16.502 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:31:18.645 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:31:18.652 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:31:18.654 [info] index finished after resolve  [object Object] 
+2025-06-18 16:31:18.654 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:31:32.311 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:31:32.314 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:31:32.315 [info] index finished after resolve  [object Object] 
+2025-06-18 16:31:32.315 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:32:31.614 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:32:31.618 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:32:31.618 [info] index finished after resolve  [object Object] 
+2025-06-18 16:32:31.618 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:32:35.596 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:32:35.603 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:32:35.603 [info] index finished after resolve  [object Object] 
+2025-06-18 16:32:35.603 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:32:37.895 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:32:37.903 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:32:37.904 [info] index finished after resolve  [object Object] 
+2025-06-18 16:32:37.904 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:32:49.980 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:32:50.006 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:32:50.007 [info] index finished after resolve  [object Object] 
+2025-06-18 16:32:50.007 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:32:52.379 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:32:52.387 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:32:52.388 [info] index finished after resolve  [object Object] 
+2025-06-18 16:32:52.389 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:35:30.511 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:35:30.515 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:35:30.517 [info] index finished after resolve  [object Object] 
+2025-06-18 16:35:30.517 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:35:32.628 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:35:32.633 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:35:32.634 [info] index finished after resolve  [object Object] 
+2025-06-18 16:35:32.634 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:35:57.834 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:35:57.837 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:35:57.837 [info] index finished after resolve  [object Object] 
+2025-06-18 16:35:57.837 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:36:00.077 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:36:00.081 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:36:00.082 [info] index finished after resolve  [object Object] 
+2025-06-18 16:36:00.082 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:03.753 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:03.759 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:03.760 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:03.761 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:05.917 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:05.923 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:05.923 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:05.923 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:08.145 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:08.150 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:08.151 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:08.151 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:12.746 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:12.749 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:12.750 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:12.750 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:14.897 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:14.908 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:14.909 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:14.910 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:17.175 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:17.179 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:17.180 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:17.180 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:20.939 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:20.943 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:20.945 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:20.945 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:26.001 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:26.008 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:26.009 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:26.009 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:28.315 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:28.321 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:28.322 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:28.322 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:32.876 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:32.879 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:32.881 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:32.881 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:35.545 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:35.549 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:35.550 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:35.550 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:40.419 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:40.422 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:40.423 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:40.423 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:56.023 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:56.028 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:56.029 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:56.029 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:37:59.421 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:37:59.454 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:37:59.455 [info] index finished after resolve  [object Object] 
+2025-06-18 16:37:59.455 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:38:04.155 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:38:04.159 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:38:04.160 [info] index finished after resolve  [object Object] 
+2025-06-18 16:38:04.160 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:45:54.033 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:45:54.039 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:45:54.042 [info] index finished after resolve  [object Object] 
+2025-06-18 16:45:54.042 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:45:56.858 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:45:56.868 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:45:56.869 [info] index finished after resolve  [object Object] 
+2025-06-18 16:45:56.869 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:45:58.941 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:45:58.952 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:45:58.954 [info] index finished after resolve  [object Object] 
+2025-06-18 16:45:58.954 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:46:01.905 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:46:01.984 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:46:01.984 [info] index finished after resolve  [object Object] 
+2025-06-18 16:46:01.984 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:46:03.986 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:46:03.989 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:46:03.990 [info] index finished after resolve  [object Object] 
+2025-06-18 16:46:03.990 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:46:06.062 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:46:06.066 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:46:06.066 [info] index finished after resolve  [object Object] 
+2025-06-18 16:46:06.066 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:46:08.297 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:46:08.303 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:46:08.304 [info] index finished after resolve  [object Object] 
+2025-06-18 16:46:08.304 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:46:45.916 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:46:45.930 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:46:45.931 [info] index finished after resolve  [object Object] 
+2025-06-18 16:46:45.931 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:46:47.970 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:46:47.975 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:46:47.976 [info] index finished after resolve  [object Object] 
+2025-06-18 16:46:47.976 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:46:51.535 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:46:51.545 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:46:51.547 [info] index finished after resolve  [object Object] 
+2025-06-18 16:46:51.548 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:46:56.040 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:46:56.048 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:46:56.050 [info] index finished after resolve  [object Object] 
+2025-06-18 16:46:56.051 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:46:58.191 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:46:58.201 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:46:58.203 [info] index finished after resolve  [object Object] 
+2025-06-18 16:46:58.203 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:00.303 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:00.306 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:00.307 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:00.307 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:02.431 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:02.434 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:02.435 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:02.435 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:04.683 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:04.688 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:04.689 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:04.689 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:09.719 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:09.722 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:09.723 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:09.723 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:11.758 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:11.761 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:11.762 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:11.762 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:14.892 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:14.895 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:14.896 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:14.896 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:17.104 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:17.109 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:17.110 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:17.110 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:19.566 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:19.588 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:19.589 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:19.589 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:22.238 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:22.240 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:22.241 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:22.241 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:24.249 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:24.255 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:24.257 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:24.258 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:26.320 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:26.327 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:26.328 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:26.328 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:37.362 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:37.370 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:37.371 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:37.371 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:39.605 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:39.615 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:39.615 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:39.616 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:47:44.520 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:47:44.523 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:47:44.524 [info] index finished after resolve  [object Object] 
+2025-06-18 16:47:44.524 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:48:06.863 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:48:06.872 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:48:06.872 [info] index finished after resolve  [object Object] 
+2025-06-18 16:48:06.873 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:48:09.030 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:48:09.033 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:48:09.034 [info] index finished after resolve  [object Object] 
+2025-06-18 16:48:09.034 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:48:11.233 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:48:11.242 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:48:11.243 [info] index finished after resolve  [object Object] 
+2025-06-18 16:48:11.243 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:48:21.839 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:48:21.850 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:48:21.852 [info] index finished after resolve  [object Object] 
+2025-06-18 16:48:21.852 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:58:19.301 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:58:19.307 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:58:19.308 [info] index finished after resolve  [object Object] 
+2025-06-18 16:58:19.308 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:58:44.752 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:58:44.791 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:58:44.793 [info] index finished after resolve  [object Object] 
+2025-06-18 16:58:44.793 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:58:49.295 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:58:49.302 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:58:49.304 [info] index finished after resolve  [object Object] 
+2025-06-18 16:58:49.304 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:58:54.677 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:58:54.717 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:58:54.718 [info] index finished after resolve  [object Object] 
+2025-06-18 16:58:54.719 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:58:56.944 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:58:56.950 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:58:56.951 [info] index finished after resolve  [object Object] 
+2025-06-18 16:58:56.951 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:58:59.093 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:58:59.109 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:58:59.110 [info] index finished after resolve  [object Object] 
+2025-06-18 16:58:59.110 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:59:01.324 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:59:01.331 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:59:01.332 [info] index finished after resolve  [object Object] 
+2025-06-18 16:59:01.332 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 16:59:02.539 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 16:59:02.673 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 16:59:02.675 [info] index finished after resolve  [object Object] 
+2025-06-18 16:59:02.675 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 17:01:47.755 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 17:01:47.762 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 17:01:47.763 [info] index finished after resolve  [object Object] 
+2025-06-18 17:01:47.763 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 17:01:49.795 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 17:01:49.807 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 17:01:49.807 [info] index finished after resolve  [object Object] 
+2025-06-18 17:01:49.808 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 17:01:52.201 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 17:01:52.216 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 17:01:52.219 [info] index finished after resolve  [object Object] 
+2025-06-18 17:01:52.219 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 17:01:54.497 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 17:01:54.523 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 17:01:54.524 [info] index finished after resolve  [object Object] 
+2025-06-18 17:01:54.524 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 17:01:56.531 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 17:01:56.587 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 17:01:56.588 [info] index finished after resolve  [object Object] 
+2025-06-18 17:01:56.588 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 17:01:58.545 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 17:01:58.550 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 17:01:58.550 [info] index finished after resolve  [object Object] 
+2025-06-18 17:01:58.551 [info] refresh page data from resolve listeners 0 100   
+2025-06-18 17:02:00.584 [debug] ignore file modify evnet 2-Sandbox/20250618-学习设计模式.md   
+2025-06-18 17:02:00.592 [info] trigger 2-Sandbox/20250618-学习设计模式.md resolve  [object Object] 
+2025-06-18 17:02:00.593 [info] index finished after resolve  [object Object] 
+2025-06-18 17:02:00.593 [info] refresh page data from resolve listeners 0 100   

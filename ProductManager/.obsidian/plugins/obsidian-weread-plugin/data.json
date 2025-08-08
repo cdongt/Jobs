@@ -1,0 +1,63 @@
+{
+  "cookies": [
+    {
+      "name": "wr_fp",
+      "value": "3482461123"
+    },
+    {
+      "name": "wr_gid",
+      "value": "243317761"
+    },
+    {
+      "name": "wr_pf",
+      "value": "undefined"
+    },
+    {
+      "name": "wr_localvid",
+      "value": "a6f32c0074cb90dda6fcf5d"
+    },
+    {
+      "name": "wr_name",
+      "value": "橙黄橘绿时"
+    },
+    {
+      "name": "wr_avatar",
+      "value": "https://thirdwx.qlogo.cn/mmopen/vi_32/hqmiajH1JJHkDwC2kozvPKjUNV4vd630TENvnvX7hicTRPGhicR5ic4NOqaDQUZWZkw4sebPCpGsKuagkSzBNsrhtg/132"
+    },
+    {
+      "name": "wr_gender",
+      "value": "2"
+    },
+    {
+      "name": "wr_skey",
+      "value": "JbxvM3ED"
+    },
+    {
+      "name": "wr_vid",
+      "value": "80449757"
+    },
+    {
+      "name": "wr_rt",
+      "value": "web@yRSXQtKc2RLxpaHJi_S_AL"
+    }
+  ],
+  "noteLocation": "1-CollectionBox/WeReadSync",
+  "dailyNotesLocation": "/",
+  "insertAfter": "<!-- start of weread -->",
+  "insertBefore": "<!-- end of weread -->",
+  "dailyNotesFormat": "YYYY-MM-DD",
+  "lastCookieTime": 1744175236482,
+  "isCookieValid": true,
+  "user": "橙黄橘绿时",
+  "userVid": "80449757",
+  "template": "---\nisbn: {{metaData.isbn}}\ncategory: {{metaData.category}}\nlastReadDate: {{metaData.lastReadDate}}\n---\n\n<br>\n\n>[!weread2|noicon] [![cover|200]({{metaData.cover}})](<{{metaData.title}}细读>)\n># {{metaData.title}}\n> - 作者： {{metaData.author}}\n> - 出版时间： {{metaData.publishTime}}\n> - ISBN： {{metaData.isbn}}\n> - 分类： {{metaData.category}}\n> - 出版社：{{metaData.publishTime|replace(\"00:00:00\",\"\")}}\n> - 划线数量：{{metaData.noteCount}}\n> - 笔记数量： {{metaData.reviewCount}}\n\n<br>\n\n>[!weread1|noicon] \n> {{metaData.intro}}\n\n\n<br>\n\n\n>[!rnb|noicon] \n>## 笔记 📔\n\n\n<br>\n\n{%- set allNotes = [] -%}\n\n{%- for highlightItem in chapterHighlights -%}\n{%- for highlight in highlightItem.highlights -%} \n{%- set allNotes = allNotes.concat({'type': 'highlight', 'data': highlight, 'range': highlight.range.split(\"-\")[0] | int}) -%}\n{%- endfor -%}\n{%- endfor -%}\n\n{%- for reviewitem in bookReview.chapterReviews -%}\n{%- for review in reviewitem.reviews -%} \n{%- set allNotes = allNotes.concat({'type': 'review', 'data': review,'range': review.range.split(\"-\")[0] | int}) -%}\n{%- endfor -%}\n{%- for chapterReview in reviewitem.chapterReviews -%} \n{%- set allNotes = allNotes.concat({'type': 'chapterReview', 'data': chapterReview}) -%}\n{%- endfor -%}\n{%- endfor -%}\n\n{%- set allNotes = allNotes|sort(attribute='data.chapterUid')|groupby('data.chapterUid') -%}\n\n{% for chapterUid, notes in allNotes %} \n\n<br>\n\n### {{ notes[0].data.chapterTitle }}\n\n<br>\n\n{%- for note in notes|sort(attribute='range') %}\n{% if note.type == 'highlight' and not note.data.reviewContent %}\n>[!weread4] {{ note.data.markText | trim | replace('\\n', '<br>') }} ^{{ note.data.chapterUid }}-{{note.data.range}}\n>- {{note.data.createTime}}\n>{{ '---' }}\n{% elif note.type == 'review' %}\n>[!weread3] {{ note.data.abstract | trim | replace('\\n', '<br>') }}\n>- {{ note.data.content }} ^{{note.data.reviewId}}\n>- {{note.data.createTime}} \n>{{ '---' }}\n{% elif note.type == 'chapterReview' %}\n###### ◰章节评论\n*写于{{note.data.createTime}}*\n- {{ note.data.content }} ^{{note.data.reviewId}}\n{%- endif %}\n{%- endfor %}\n{% endfor %}\n\n{%- for bookReview in bookReview.bookReviews %} {% if bookReview.mdContent.length %}\n>[!rnb|noicon] \n>## 书评 \n*写于{{bookReview.createTime}}*\n{{bookReview.mdContent}} ^{{bookReview.reviewId}}\n{% endif %} {% endfor %}",
+  "noteCountLimit": 10,
+  "subFolderType": "category",
+  "fileNameType": "BOOK_NAME_AUTHOR",
+  "dailyNotesToggle": false,
+  "notesBlacklist": "",
+  "showEmptyChapterTitleToggle": true,
+  "convertTags": false,
+  "saveArticleToggle": true,
+  "saveReadingInfoToggle": true
+}

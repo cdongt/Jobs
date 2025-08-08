@@ -1,0 +1,28 @@
+{
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 91
+  },
+  "attachmentFolderPath": "./attachments",
+  "newFileLocation": "folder",
+  "strictLineBreaks": false,
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "propertiesInDocument": "visible",
+  "showLineNumber": false,
+  "focusNewTab": true,
+  "autoPairMarkdown": true,
+  "defaultViewMode": "source",
+  "userIgnoreFilters": [
+    "Z-Configuration/",
+    "1-CollectionBox/",
+    "Z-DirectoryAdjustment/"
+  ],
+  "tabSize": 2,
+  "newFileFolderPath": "2-Sandbox"
+}

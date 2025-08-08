@@ -1,0 +1,21 @@
+{
+  "accentColor": "#5ba985",
+  "baseFontSize": 16,
+  "cssTheme": "Blue Topaz",
+  "theme": "moonstone",
+  "interfaceFontFamily": "方正盛世楷书简体_准",
+  "textFontFamily": "方正盛世楷书简体_准",
+  "monospaceFontFamily": "Consolas",
+  "enabledCssSnippets": [
+    "callout_note",
+    "excalidraw_autodisplay",
+    "excalidraw_autohide",
+    "separator",
+    "wucai",
+    "weread",
+    "components-card-cover-nopadding",
+    "grid-line"
+  ],
+  "nativeMenus": false,
+  "baseFontSizeAction": true
+}
