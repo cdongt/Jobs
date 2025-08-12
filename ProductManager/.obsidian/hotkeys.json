@@ -326,14 +326,6 @@
       "key": "F"
     }
   ],
-  "editor:insert-codeblock": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "C"
-    }
-  ],
   "callout-manager:manage-callouts": [
     {
       "modifiers": [
@@ -418,6 +410,24 @@
         "Mod"
       ],
       "key": "N"
+    }
+  ],
+  "editor:insert-codeblock": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "C"
+    }
+  ],
+  "obsidian-task-progress-bar:open-task-genius-view": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "T"
     }
   ]
 }

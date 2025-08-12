@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiArchive",
       "LiPin",
       "LiHome",
       "LiWind",
-      "LiAntenna",
-      "⛑"
+      "LiAntenna"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -42,5 +42,6 @@
   "3-Zettelkasten/readme-Zettelkasten.md": "LiPin",
   "4-MainConcepts/readme-MainConcepts.md": "LiPin",
   "5-Practice/readme-Practice.md": "LiPin",
-  "6-Generalize/readme-Generalize.md": "LiPin"
+  "6-Generalize/readme-Generalize.md": "LiPin",
+  "2-Sandbox/20250811-产品经理-学习资源获取指南.md": "LiArchive"
 }

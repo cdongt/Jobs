@@ -40,7 +40,7 @@
   "devMode": false,
   "templateFolderPath": "Z-Configuration/0Template",
   "announceUpdates": true,
-  "version": "1.18.1",
+  "version": "2.1.0",
   "disableOnlineFeatures": true,
   "enableRibbonIcon": false,
   "showCaptureNotification": true,

@@ -129,7 +129,7 @@
   "blue-topaz-theme@@bt-bubble-layout-padding": "12px",
   "blue-topaz-theme@@bt-bubble-buttons": false,
   "blue-topaz-theme@@bt-bubble-not-file-tree": true,
-  "blue-topaz-theme@@scrollbar-style-option": "default-scrollbar",
+  "blue-topaz-theme@@scrollbar-style-option": "hover-scrollbars",
   "blue-topaz-theme@@scrollbar-thumb-bg@@light": "#D1E1D8",
   "blue-topaz-theme@@colorful-link-animation": true,
   "blue-topaz-theme@@font-size-outline": "16px",
