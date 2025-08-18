@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b8289f6addc7cceb",
+        "id": "d67b31d7e5a0f37d",
         "type": "tabs",
         "children": [
           {
-            "id": "d16a00f123c1c2f0",
+            "id": "1b5e5d8cbc977925",
             "type": "leaf",
             "state": {
               "type": "task-genius-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "folders",
+              "title": "项目"
             }
           },
           {
-            "id": "6a2e4eb3df392d4b",
+            "id": "0fa80d9acd9f221e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,37 +33,22 @@
             }
           },
           {
-            "id": "af0b7f23fc6874e1",
+            "id": "e7223020daaf74fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Sandbox/20250618-如何阅读技术类书籍.md",
+                "file": "2-Sandbox/20250812-3个月产品经理学习计划.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "20250618-如何阅读技术类书籍"
-            }
-          },
-          {
-            "id": "07f9d6b20aef9468",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-Sandbox/20250808-微信读书-询问AI技能要求.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "20250808-微信读书-询问AI技能要求"
+              "title": "20250812-3个月产品经理学习计划"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -254,8 +239,12 @@
       "obsidian-task-progress-bar:打开 Task Genius 视图": false
     }
   },
-  "active": "7abf62033653f26d",
+  "active": "e7223020daaf74fd",
   "lastOpenFiles": [
+    "2-Sandbox/20250811-产品经理-学习资源获取指南.md",
+    "Z-Configuration/0Template/DailyNote.md",
+    "0Tasks/Daily/2025-08-18.md",
+    "2-Sandbox/20250808-微信读书-询问AI技能要求.md",
     "2-Sandbox/20250812-3个月产品经理学习计划.md",
     "2-Sandbox/3个月产品经理学习计划.md",
     "2-Sandbox/20250812-产品经理岗位/面试准备与技巧.md",
@@ -271,8 +260,6 @@
     "2-Sandbox/20250812-产品经理岗位/产品经理作品集打造.md",
     "2-Sandbox/20250812-产品经理岗位",
     "2-Sandbox/20250618-如何阅读技术类书籍.md",
-    "2-Sandbox/20250811-产品经理-学习资源获取指南.md",
-    "2-Sandbox/20250808-微信读书-询问AI技能要求.md",
     "2-Sandbox/20250808-微信读书-3个月突击计划/第1个月每日学习清单.md",
     "2-Sandbox/20250808-微信读书-3个月突击计划/学习计划执行工具.md",
     "2-Sandbox/20250808-微信读书-3个月突击计划/每日学习打卡模板.md",
@@ -281,8 +268,6 @@
     "2-Sandbox/20250808-微信读书-3个月突击计划/01-第一月-基础建设/第一周学习计划.md",
     "2-Sandbox/20250808-微信读书-3个月突击计划/第3个月每日学习清单.md",
     "2-Sandbox/20250808-微信读书-3个月突击计划/第2个月每日学习清单.md",
-    "2-Sandbox/20250808-微信读书-3个月突击计划/每日执行模板.md",
-    "2-Sandbox/20250808-微信读书-3个月突击计划/第十二周精准执行清单.md",
     "2-Sandbox/20250808-微信读书-3个月突击计划/面试准备",
     "2-Sandbox/20250808-微信读书-3个月突击计划/实战项目",
     "2-Sandbox/20250808-微信读书-3个月突击计划/资源库",

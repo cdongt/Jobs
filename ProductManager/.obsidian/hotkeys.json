@@ -326,6 +326,15 @@
       "key": "F"
     }
   ],
+  "editor:insert-codeblock": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "C"
+    }
+  ],
   "callout-manager:manage-callouts": [
     {
       "modifiers": [
@@ -360,15 +369,6 @@
       "key": "O"
     }
   ],
-  "file-explorer:open": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "D"
-    }
-  ],
   "graph:open": [
     {
       "modifiers": [
@@ -376,6 +376,14 @@
         "Mod"
       ],
       "key": "G"
+    }
+  ],
+  "app:toggle-right-sidebar": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowRight"
     }
   ],
   "app:toggle-left-sidebar": [
@@ -386,12 +394,22 @@
       "key": "ArrowLeft"
     }
   ],
-  "app:toggle-right-sidebar": [
+  "bookmarks:bookmark-current-section": [
     {
       "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "M"
+    }
+  ],
+  "obsidian-task-progress-bar:force-reindex-tasks": [
+    {
+      "modifiers": [
+        "Alt",
         "Mod"
       ],
-      "key": "ArrowRight"
+      "key": "I"
     }
   ],
   "workspace:copy-path": [
@@ -403,7 +421,7 @@
       "key": "P"
     }
   ],
-  "quickadd:choice:bbae9370-0f7b-49b0-800a-42d617d52a95": [
+  "quickadd:choice:e40eb531-d1e5-44d3-8b41-285ef8a19318": [
     {
       "modifiers": [
         "Alt",
@@ -412,13 +430,22 @@
       "key": "N"
     }
   ],
-  "editor:insert-codeblock": [
+  "file-explorer:reveal-active-file": [
     {
       "modifiers": [
         "Alt",
         "Mod"
       ],
-      "key": "C"
+      "key": "D"
+    }
+  ],
+  "obsidian-linter:lint-file-unless-ignored": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "L"
     }
   ],
   "obsidian-task-progress-bar:open-task-genius-view": [
@@ -428,6 +455,23 @@
         "Mod"
       ],
       "key": "T"
+    }
+  ],
+  "obsidian-task-progress-bar:minimal-quick-capture": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "C"
+    }
+  ],
+  "quickadd:choice:d32b1745-80b7-4cd8-a1ba-96f96dff1056": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "6"
     }
   ]
 }

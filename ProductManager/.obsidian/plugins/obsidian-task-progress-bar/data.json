@@ -42,6 +42,10 @@
   "hideProgressBarFolders": "",
   "hideProgressBarMetadata": "hide-progress-bar",
   "showProgressBarBasedOnHeading": "",
+  "projectViewDefaultMode": "list",
+  "projectTreeAutoExpand": false,
+  "projectTreeShowEmptyFolders": false,
+  "projectPathSeparator": "/",
   "autoCompleteParent": true,
   "markParentInProgressWhenPartiallyComplete": true,
   "taskStatuses": {
@@ -135,14 +139,14 @@
     "targetFile": "QuickCapture.md",
     "placeholder": "记录你的想法...",
     "appendToFile": "append",
-    "targetType": "fixed",
-    "targetHeading": "",
+    "targetType": "daily-note",
+    "targetHeading": "🌩️快速捕获",
     "dailyNoteSettings": {
       "format": "YYYY-MM-DD",
-      "folder": "",
-      "template": ""
+      "folder": "0Tasks/Daily",
+      "template": "Z-Configuration/0Template/DailyNote"
     },
-    "enableMinimalMode": true,
+    "enableMinimalMode": false,
     "minimalModeSettings": {
       "suggestTrigger": "/"
     }
@@ -245,7 +249,8 @@
     "pathMappings": [],
     "metadataConfig": {
       "metadataKey": "project",
-      "enabled": false
+      "enabled": false,
+      "detectionMethods": []
     },
     "configFile": {
       "fileName": "project.md",
@@ -285,6 +290,7 @@
   "focusHeading": "",
   "enableView": true,
   "enableInlineEditor": true,
+  "enableDynamicMetadataPositioning": true,
   "defaultViewMode": "tree",
   "globalFilterRules": {
     "advancedFilter": {
@@ -747,6 +753,8 @@
     "timeFormat": "{h}hrs {m}mins",
     "blockRefPrefix": "timer"
   },
+  "enableCustomDateFormats": false,
+  "customDateFormats": [],
   "onboarding": {
     "completed": true,
     "version": "9.1.5",
@@ -807,6 +815,12 @@
       "Z-Configuration/0Template/概念.md": {
         "KnowledgeTypes": "Concept"
       },
+      "Z-Configuration/0Template/DailyNote-topics.md": {
+        "创建时间": "2024-08-09 16:25",
+        "最新更新时间": "2024-08-21 09:39",
+        "Difficulty": "<% tp.system.suggester([\"简单\",\"中等\",\"较难\",\"困难\"],[\"简单\",\"中等\",\"较难\",\"困难\"],true,'今日难度如何？') %>",
+        "Tags": null
+      },
       "Z-Configuration/0Template/好例子记录模板.md": {
         "来源": null,
         "tags": [
@@ -819,12 +833,6 @@
       "Z-Configuration/0Template/DailyNote.md": {
         "创建时间": "2025-07-09 10:05",
         "最新更新时间": "2025-07-17 10:14",
-        "Tags": null
-      },
-      "Z-Configuration/0Template/DailyNote-topics.md": {
-        "创建时间": "2024-08-09 16:25",
-        "最新更新时间": "2024-08-21 09:39",
-        "Difficulty": "<% tp.system.suggester([\"简单\",\"中等\",\"较难\",\"困难\"],[\"简单\",\"中等\",\"较难\",\"困难\"],true,'今日难度如何？') %>",
         "Tags": null
       },
       "Z-Configuration/0Template/Capture.md": {
@@ -857,20 +865,6 @@
         "创建时间": "2025-06-11 10:55",
         "最新更新时间": "2025-06-25 09:25"
       },
-      "5-Projects/readme-Projects.md": {
-        "aliases": [
-          "readme-Projects"
-        ],
-        "创建时间": "2025-06-11 10:54",
-        "最新更新时间": "2025-06-11 10:55"
-      },
-      "3-Zettelkasten/readme-Zettelkasten.md": {
-        "aliases": [
-          "readme-Zettelkasten"
-        ],
-        "创建时间": "2025-06-11 10:51",
-        "最新更新时间": "2025-06-11 10:52"
-      },
       "4-MainConcepts/readme-MainConcepts.md": {
         "aliases": [
           "readme-MainConcepts"
@@ -878,15 +872,40 @@
         "创建时间": "2025-06-11 10:52",
         "最新更新时间": "2025-06-11 10:54"
       },
-      "2-Sandbox/提示词工程-待整理/提示词框架/KITE.md": {
+      "5-Projects/readme-Projects.md": {
         "aliases": [
-          "KITE"
+          "readme-Projects"
         ],
-        "创建时间": "2025-04-07 11:54",
-        "最新更新时间": "2025-04-07 13:23",
+        "创建时间": "2025-06-11 10:54",
+        "最新更新时间": "2025-06-11 10:55"
+      },
+      "2-Sandbox/20250808-微信读书-询问AI技能要求.md": {
+        "cssclasses": "grid-bg",
+        "创建时间": "2025-08-08 15:32",
+        "最新更新时间": "2025-08-12 12:00"
+      },
+      "2-Sandbox/readme-Sandbox.md": {
+        "cssclasses": "grid-bg",
+        "aliases": [
+          "readme-Sandbox",
+          "reame-Sandbox"
+        ],
+        "创建时间": "2025-06-11 10:49",
+        "最新更新时间": "2025-08-08 11:13"
+      },
+      "2-Sandbox/20250618-如何阅读技术类书籍.md": {
+        "cssclasses": "grid-bg",
         "tags": [
-          "提示词框架"
-        ]
+          "阅读方法",
+          "技术类书籍"
+        ],
+        "创建时间": "2025-02-12 11:31",
+        "最新更新时间": "2025-08-08 11:14"
+      },
+      "2-Sandbox/20250811-产品经理-学习资源获取指南.md": {
+        "cssclasses": "grid-bg",
+        "创建时间": "2025-08-11 11:12",
+        "最新更新时间": "2025-08-11 11:41"
       },
       "2-Sandbox/提示词工程-待整理/提示词优化-经验.md": {
         "aliases": [
@@ -903,12 +922,15 @@
         "创建时间": "2025-03-13 21:06",
         "最新更新时间": "2025-04-18 13:41"
       },
-      "2-Sandbox/提示词工程-待整理/代码生成/正在测试的提示词/excel-python.md": {
+      "2-Sandbox/提示词工程-待整理/提示词框架/KITE.md": {
         "aliases": [
-          "excel-python"
+          "KITE"
         ],
-        "创建时间": "2025-03-10 10:57",
-        "最新更新时间": "2025-03-10 17:20"
+        "创建时间": "2025-04-07 11:54",
+        "最新更新时间": "2025-04-07 13:23",
+        "tags": [
+          "提示词框架"
+        ]
       },
       "2-Sandbox/提示词工程-待整理/代码生成/正在测试的提示词/正在测试.md": {
         "aliases": [
@@ -916,6 +938,13 @@
         ],
         "创建时间": "2025-04-23 18:21",
         "最新更新时间": "2025-04-30 10:11"
+      },
+      "2-Sandbox/提示词工程-待整理/代码生成/正在测试的提示词/excel-python.md": {
+        "aliases": [
+          "excel-python"
+        ],
+        "创建时间": "2025-03-10 10:57",
+        "最新更新时间": "2025-03-10 17:20"
       },
       "2-Sandbox/提示词工程-待整理/代码生成/引导对话.md": {
         "aliases": [
@@ -938,33 +967,27 @@
         "创建时间": "2025-04-16 18:15",
         "最新更新时间": "2025-04-23 15:23"
       },
-      "2-Sandbox/readme-Sandbox.md": {
+      "2-Sandbox/20250812-产品经理岗位/用户研究入门与实践.md": {
         "cssclasses": "grid-bg",
+        "创建时间": "2025-08-12 14:24",
+        "最新更新时间": "2025-08-12 14:53"
+      },
+      "2-Sandbox/20250812-产品经理岗位/产品经理常用工具与学习资源.md": {
+        "cssclasses": "grid-bg",
+        "创建时间": "2025-08-12 14:27",
+        "最新更新时间": "2025-08-12 15:53"
+      },
+      "2-Sandbox/20250812-产品经理岗位/产品经理基础理论与方法论.md": {
+        "cssclasses": "grid-bg",
+        "创建时间": "2025-08-12 14:23",
+        "最新更新时间": "2025-08-12 15:53"
+      },
+      "3-Zettelkasten/readme-Zettelkasten.md": {
         "aliases": [
-          "readme-Sandbox",
-          "reame-Sandbox"
+          "readme-Zettelkasten"
         ],
-        "创建时间": "2025-06-11 10:49",
-        "最新更新时间": "2025-08-08 11:13"
-      },
-      "2-Sandbox/20250808-微信读书-询问AI技能要求.md": {
-        "cssclasses": "grid-bg",
-        "创建时间": "2025-08-08 15:32",
-        "最新更新时间": "2025-08-08 18:09"
-      },
-      "2-Sandbox/20250808-微信读书-训练计划.md": {
-        "cssclasses": "grid-bg",
-        "创建时间": "2025-08-08 15:36",
-        "最新更新时间": "2025-08-08 15:36"
-      },
-      "2-Sandbox/20250618-如何阅读技术类书籍.md": {
-        "cssclasses": "grid-bg",
-        "tags": [
-          "阅读方法",
-          "技术类书籍"
-        ],
-        "创建时间": "2025-02-12 11:31",
-        "最新更新时间": "2025-08-08 11:14"
+        "创建时间": "2025-06-11 10:51",
+        "最新更新时间": "2025-06-11 10:52"
       },
       "0Tasks/Daily/2025-08-08.md": {
         "cssclasses": "grid-bg",
